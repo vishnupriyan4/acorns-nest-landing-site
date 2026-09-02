@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { BrandMark } from "@/components/brand-mark";
-import { NAV_LINKS } from "@/lib/content";
+import { HERO, NAV_LINKS } from "@/lib/content";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -66,7 +66,7 @@ export function SiteHeader() {
             href="#demo"
             className="inline-flex rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-hover"
           >
-            Request a demo
+            {HERO.primaryCta}
           </a>
         </div>
 
@@ -111,7 +111,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
               className="mt-2 rounded-lg bg-primary px-3 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
-              Request a demo
+              {HERO.primaryCta}
             </a>
           </nav>
         </div>

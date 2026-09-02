@@ -1,7 +1,7 @@
 "use client";
 
 import { Reveal } from "@/components/ui/reveal";
-import { STEPS } from "@/lib/content";
+import { HOW_IT_WORKS_INTRO, STEPS } from "@/lib/content";
 
 export function HowItWorks() {
   return (
@@ -9,29 +9,37 @@ export function HowItWorks() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-            A day in the nest
+            {HOW_IT_WORKS_INTRO.kicker}
           </p>
           <h2 className="mt-3 max-w-xl font-brand text-3xl tracking-tight text-ink sm:text-4xl">
-            Log once. Everyone sees it.
+            {HOW_IT_WORKS_INTRO.title}
           </h2>
         </Reveal>
 
-        <ol className="relative mt-12 grid gap-6 md:grid-cols-3">
+        <ol className="relative mt-12 max-w-2xl">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-[16%] right-[16%] top-7 hidden h-px bg-gradient-to-r from-primary/10 via-primary/50 to-primary/10 md:block"
+            className="pointer-events-none absolute bottom-6 left-5 top-6 w-px bg-gradient-to-b from-primary/25 via-primary/45 to-primary/15"
           />
-          {STEPS.map((step, i) => (
-            <Reveal key={step.title} delayMs={i * 90}>
-              <li className="relative rounded-xl border border-border bg-background p-6 shadow-sm">
-                <span className="relative z-10 flex size-10 items-center justify-center rounded-full bg-primary font-brand text-sm text-primary-foreground shadow-md">
-                  {i + 1}
-                </span>
-                <h3 className="mt-5 font-semibold text-foreground">{step.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-muted">{step.body}</p>
-              </li>
-            </Reveal>
-          ))}
+
+          {STEPS.map((step, i) => {
+            const last = i === STEPS.length - 1;
+            return (
+              <Reveal key={step.title} delayMs={i * 90}>
+                <li className={`relative flex gap-5 ${last ? "" : "pb-10"}`}>
+                  <span className="relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full bg-primary font-brand text-sm text-primary-foreground shadow-md">
+                    {i + 1}
+                  </span>
+                  <div className="min-w-0 flex-1 pt-1.5">
+                    <h3 className="font-semibold text-foreground sm:text-lg">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-muted">{step.body}</p>
+                  </div>
+                </li>
+              </Reveal>
+            );
+          })}
         </ol>
       </div>
     </section>

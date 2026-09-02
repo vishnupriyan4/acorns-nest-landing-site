@@ -1,6 +1,15 @@
-# Replace these filenames with real captures (PNG or JPG):
-#   admin-classrooms.png
-#   admin-reports.png
-#   mobile-staff-dashboard.png
-#   mobile-parent-home.png
-# The landing frames load them automatically and hide the branded mock.
+# Unique product captures — PNG, JPG, or WebP, any size.
+# Exact filenames (do not reuse a file across slots):
+#
+#   classrooms.png           Director → Classrooms (hero)
+#   parent-home.png          Parent → Home (hero)
+#   staff-home.png           Staff → Classroom home, Outing Mode on
+#   staff-log.png            Staff → Bulk Log
+#   parent-communicate.png   Parent → Communicate
+#   menu-planner.png         Director → Menu Planner
+#   reports.png              Director → Reports
+#   staff-management.png     Director → Staff Management
+#   ai-insights.png          Director → AI Insights
+#   messages.png             Director → Messages → Send
+#   parent-history.png       Parent → History
+#   child-profile.png        Staff → child profile

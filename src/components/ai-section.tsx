@@ -3,7 +3,7 @@
 import { Brain } from "lucide-react";
 
 import { Reveal } from "@/components/ui/reveal";
-import { AI_SIGNALS } from "@/lib/content";
+import { AI_SECTION, AI_SIGNALS } from "@/lib/content";
 
 export function AiSection() {
   return (
@@ -24,12 +24,10 @@ export function AiSection() {
             Powered by AI
           </span>
           <h2 className="mt-5 max-w-xl font-brand text-3xl tracking-tight sm:text-4xl">
-            Insights that read the logs you already keep.
+            {AI_SECTION.title}
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-            The director dashboard surfaces attendance anomalies, nap patterns,
-            and engagement trends from the same records teachers write on the
-            floor — branded clearly as AI, never buried in a spreadsheet.
+            {AI_SECTION.body}
           </p>
         </Reveal>
 

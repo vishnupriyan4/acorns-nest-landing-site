@@ -34,7 +34,7 @@ export function BrowserFrame({ children, className = "", tilt = false }: FramePr
           director.acornsnest.app
         </div>
       </div>
-      <div className="relative aspect-[16/10] bg-surface">{children}</div>
+      {children}
     </div>
   );
 }
@@ -53,12 +53,9 @@ export function PhoneFrame({ children, className = "", tilt = false }: FrameProp
       onPointerMove={tilt ? pointer.onPointerMove : undefined}
       onPointerLeave={tilt ? pointer.onPointerLeave : undefined}
       style={style}
-      className={`relative mx-auto w-[260px] overflow-hidden rounded-[32px] border-[10px] border-ink bg-ink shadow-glow transition-transform duration-200 ease-out ${className}`}
+      className={`relative mx-auto w-full max-w-[280px] overflow-hidden rounded-[28px] border-[8px] border-ink bg-ink shadow-glow transition-transform duration-200 ease-out ${className}`}
     >
-      <div className="absolute left-1/2 top-2 z-20 h-5 w-20 -translate-x-1/2 rounded-full bg-ink" />
-      <div className="relative aspect-[9/19] overflow-hidden rounded-[22px] bg-cream">
-        {children}
-      </div>
+      <div className="overflow-hidden rounded-[20px] bg-cream">{children}</div>
     </div>
   );
 }

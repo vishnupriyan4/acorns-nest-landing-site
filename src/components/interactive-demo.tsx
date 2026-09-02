@@ -4,6 +4,7 @@ import { Bell } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import { Reveal } from "@/components/ui/reveal";
+import { CLASSROOM_DEMO } from "@/lib/content";
 
 type Child = {
   id: string;
@@ -74,14 +75,19 @@ export function InteractiveDemo() {
   const parentFeed = useMemo(() => {
     return children
       .filter((c) => c.present)
-      .map((c) => ({
-        name: c.name.split(" ")[0],
-        line: c.nap
-          ? "Napping now"
-          : c.meal > 0
-            ? `Lunch ${c.meal}%`
-            : "Checked in",
-      }));
+      .map((c) => {
+        const pending: string[] = [];
+        if (c.nap) pending.push("nap");
+        if (c.meal > 0) pending.push(`lunch ${c.meal}%`);
+        return {
+          name: c.name.split(" ")[0],
+          line: "Checked in",
+          pending:
+            pending.length > 0
+              ? `${pending.join(", ")} · publishes with today's log`
+              : null,
+        };
+      });
   }, [children]);
 
   return (
@@ -89,15 +95,13 @@ export function InteractiveDemo() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-            Try a classroom
+            {CLASSROOM_DEMO.kicker}
           </p>
           <h2 className="mt-3 max-w-xl font-brand text-3xl tracking-tight text-ink sm:text-4xl">
-            Tap the room. Watch the parent feed move.
+            {CLASSROOM_DEMO.title}
           </h2>
           <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
-            This is a live mock of the staff log and parent view — no account
-            required. Toggle attendance, start a nap, cycle lunch intake, or
-            broadcast Outing Mode.
+            {CLASSROOM_DEMO.body}
           </p>
         </Reveal>
 
@@ -184,7 +188,10 @@ export function InteractiveDemo() {
               <p className="text-xs font-semibold uppercase tracking-wide text-primary">
                 Parent feed
               </p>
-              <p className="mt-1 font-brand text-lg text-ink">What families see</p>
+              <p className="mt-1 font-brand text-lg text-ink">What families see now</p>
+              <p className="mt-1 text-xs text-muted">
+                Check-in and outings in the moment. Naps and meals when the centre publishes the day.
+              </p>
               {outing ? (
                 <div className="mt-4 rounded-lg bg-tertiary-muted px-3 py-2.5">
                   <p className="text-sm font-semibold">Outing · City Park Garden</p>
@@ -202,6 +209,9 @@ export function InteractiveDemo() {
                     >
                       <p className="text-sm font-semibold">{item.name}</p>
                       <p className="text-xs text-muted">{item.line}</p>
+                      {item.pending ? (
+                        <p className="mt-1 text-[11px] text-muted">{item.pending}</p>
+                      ) : null}
                     </div>
                   ))
                 )}

@@ -4,7 +4,7 @@ import { ChefHat, GraduationCap, HeartHandshake, LayoutDashboard } from "lucide-
 import { useState } from "react";
 
 import { Reveal } from "@/components/ui/reveal";
-import { ROLES } from "@/lib/content";
+import { ROLES, ROLES_INTRO } from "@/lib/content";
 
 const ICONS = {
   director: LayoutDashboard,
@@ -21,14 +21,13 @@ export function Roles() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-            Who it&apos;s for
+            {ROLES_INTRO.kicker}
           </p>
           <h2 className="mt-3 max-w-xl font-brand text-3xl tracking-tight text-ink sm:text-4xl">
-            Four roles. The same nest.
+            {ROLES_INTRO.title}
           </h2>
           <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
-            Role-based access keeps the director dashboard, staff floor tools,
-            kitchen menus, and parent feed apart — without splitting the data.
+            {ROLES_INTRO.body}
           </p>
         </Reveal>
 
