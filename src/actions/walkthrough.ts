@@ -41,7 +41,7 @@ export async function submitWalkthrough(
   }
 
   const from =
-    process.env.RESEND_FROM_EMAIL ?? "Acorns Nest <beth.t@example.com>";
+    process.env.RESEND_FROM_EMAIL ?? "Acorns Nest Support <support@acornsnest.com>";
 
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
