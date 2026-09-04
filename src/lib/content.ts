@@ -42,10 +42,10 @@ export const STATS = [
     detail: "Centre, classroom, and child",
   },
   {
-    value: 4,
+    value: 3,
     suffix: "",
     label: "Meal slots, one tidy plan",
-    detail: "Breakfast through afternoon snack",
+    detail: "Breakfast, lunch, evening snack",
   },
   {
     value: 1,
@@ -115,10 +115,10 @@ export const STORY_SECTIONS = [
     topic: "Menu Planner",
     kicker: "The week on a grid",
     title: "Plan Monday's lunch once. Monday takes care of itself.",
-    body: "Fill Breakfast, Morning Snack, Lunch, and Afternoon Snack from Monday to Friday. Type straight into the grid or drop in the weekly PDF you already make. The same slots show up on parent home as today's menu, so the kitchen and the families are finally reading one plan.",
+    body: "Fill Breakfast, Lunch, and Evening Snack from Monday to Friday. Save up to four reusable weeks from the PDF you already make, then put Week 1 on this week in one click. Typed changes stay on that week and do not rewrite the saved menus. Parents see today's meals on home.",
     bullets: [
-      "Week picker with a five-day meal grid",
-      "Upload the PDF you already have, then save the week",
+      "Week strip for this week and the next three",
+      "Saved menus: upload a PDF per week, or one PDF for every week",
       "Today's menu on parent home. Nothing taped to the door.",
     ],
     screenshot: {
@@ -300,8 +300,8 @@ export const ROLES = [
     kicker: "Menus & dietary care",
     summary: "This week's meals, where rooms and families already look.",
     points: [
-      "Weekly Menu Planner: breakfast, morning snack, lunch, afternoon snack",
-      "PDF into the grid, then straight onto parent home",
+      "Weekly Menu Planner: breakfast, lunch, evening snack",
+      "Saved weeks from PDF, then apply to this week — or type a one-off",
       "Allergies and dietary restrictions on every child's profile",
       "Teachers log intake in 25% steps. Infant milk in ounces.",
     ],
