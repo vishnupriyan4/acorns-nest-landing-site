@@ -24,7 +24,7 @@ function Stat({
 }) {
   const n = useCountUp(value, active);
   return (
-    <div>
+    <div className="text-center">
       <p className="font-brand text-3xl tracking-tight text-primary">
         {n}
         {suffix}
@@ -55,7 +55,7 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
   }, []);
 
   return (
-    <section ref={ref} className="relative overflow-hidden pt-28 sm:pt-32">
+    <section ref={ref} className="relative overflow-hidden pt-20 sm:pt-32">
       <div
         aria-hidden
         className="pointer-events-none absolute -left-24 top-16"
@@ -81,14 +81,14 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             <Sparkles className="size-3.5" />
             {HERO.eyebrow}
           </p>
-          <h1 className="mt-6 font-brand text-[40px] leading-[1.05] tracking-tight text-ink sm:text-6xl">
+          <h1 className="mt-4 font-brand text-[32px] leading-[1.1] tracking-tight text-ink sm:mt-6 sm:text-6xl">
             {HERO.headlineBefore}
             <span className="hero-gradient-text">{HERO.headlineAfter}</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted sm:mt-5 sm:text-lg sm:leading-7">
             {HERO.subhead}
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-5 flex flex-col items-center justify-center gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
             <a
               href="#demo"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-md transition hover:bg-primary-hover"
@@ -105,8 +105,8 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-16 max-w-5xl pb-8 sm:pb-24">
-          <div className="absolute -left-2 top-8 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground shadow-md sm:block">
+        <div className="relative mx-auto mt-8 max-w-5xl lg:mt-16 lg:pb-24">
+          <div className="absolute -left-2 top-8 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground shadow-md lg:block">
             <span className="relative mr-1.5 inline-flex size-2">
               <span className="pulse-ring absolute inset-0 rounded-full bg-tertiary" />
               <span className="relative size-2 rounded-full bg-tertiary" />
@@ -114,29 +114,31 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             Outing Mode live
           </div>
           <div
-            className="absolute -right-1 top-24 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-primary shadow-md sm:block"
+            className="absolute -right-1 top-24 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-primary shadow-md lg:block"
             style={{ animationDelay: "0.8s" }}
           >
             Powered by AI
           </div>
           <div
-            className="absolute bottom-28 left-0 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground shadow-md md:block"
+            className="absolute bottom-28 left-0 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground shadow-md lg:block"
             style={{ animationDelay: "1.2s" }}
           >
             11 / 12 present
           </div>
 
-          <BrowserFrame tilt>
-            <ProductScreenshot
-              src={classroomsSrc}
-              alt="Director Classroom Management"
-              hint={HERO_SHOTS.classrooms.hint}
-              capture={HERO_SHOTS.classrooms.capture}
-            />
-          </BrowserFrame>
+          <div className="hidden lg:block">
+            <BrowserFrame tilt>
+              <ProductScreenshot
+                src={classroomsSrc}
+                alt="Director Classroom Management"
+                hint={HERO_SHOTS.classrooms.hint}
+                capture={HERO_SHOTS.classrooms.capture}
+              />
+            </BrowserFrame>
+          </div>
 
-          <div className="relative z-20 mx-auto mt-6 sm:absolute sm:-bottom-10 sm:right-4 sm:mt-0 sm:mx-0 md:right-10">
-            <PhoneFrame tilt className="w-[200px] max-w-none shadow-glow md:w-[230px]">
+          <div className="relative z-20 mx-auto w-fit lg:absolute lg:-bottom-10 lg:right-10 lg:mx-0">
+            <PhoneFrame className="w-[210px] max-w-none shadow-glow lg:w-[230px]" tilt={false}>
               <ProductScreenshot
                 src={parentHomeSrc}
                 alt="Parent home"
@@ -148,7 +150,7 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
         </div>
       </div>
 
-      <div className="relative mx-auto mt-12 max-w-6xl border-t border-border/70 px-5 py-10 sm:px-8">
+      <div className="relative mx-auto mt-10 max-w-6xl border-t border-border/70 px-5 py-8 sm:mt-12 sm:px-8 sm:py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STATS.map((stat) => (
             <Stat key={stat.label} {...stat} active={isInView} />

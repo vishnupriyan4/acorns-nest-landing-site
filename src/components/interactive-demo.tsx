@@ -188,9 +188,9 @@ export function InteractiveDemo() {
               <p className="text-xs font-semibold uppercase tracking-wide text-primary">
                 Parent feed
               </p>
-              <p className="mt-1 font-brand text-lg text-ink">What families see now</p>
+              <p className="mt-1 font-brand text-lg text-ink">What families see right now</p>
               <p className="mt-1 text-xs text-muted">
-                Check-in and outings in the moment. Naps and meals when the centre publishes the day.
+                Check-in and outings land right away. Naps and meals wait for you to publish the day.
               </p>
               {outing ? (
                 <div className="mt-4 rounded-lg bg-tertiary-muted px-3 py-2.5">
@@ -200,7 +200,7 @@ export function InteractiveDemo() {
               ) : null}
               <div className="mt-4 space-y-2">
                 {parentFeed.length === 0 ? (
-                  <p className="text-sm text-muted">No children checked in yet.</p>
+                  <p className="text-sm text-muted">Quiet room. Nobody checked in yet.</p>
                 ) : (
                   parentFeed.map((item) => (
                     <div

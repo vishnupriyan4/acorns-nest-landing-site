@@ -5,13 +5,13 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO = {
-  eyebrow: "Childcare software built around the live day",
+  eyebrow: "Built for the busiest room in the building",
   headlineBefore: "See every classroom",
-  headlineAfter: " while the day is still happening.",
+  headlineAfter: " while the day is in full swing.",
   subhead:
-    "Directors watch rooms, staff, menus, and reports from the admin. Teachers log check-in, naps, and lunch from the floor. Parents see if the class is out and today's menu during the day, then the care log once the centre publishes it.",
+    "Directors get the whole centre on one screen. Teachers log check-in, naps, and lunch from the room, one save at a time. Parents see today's menu and outing news as it happens, then the full care log the moment you publish it.",
   primaryCta: "Book a walkthrough",
-  secondaryCta: "See the product",
+  secondaryCta: "Take a look around",
 } as const;
 
 export const MARQUEE_ITEMS = [
@@ -32,26 +32,26 @@ export const STATS = [
   {
     value: 4,
     suffix: "",
-    label: "People who need the same day",
+    label: "Roles reading one day",
     detail: "Director, teacher, parent, kitchen",
   },
   {
     value: 3,
     suffix: "",
-    label: "Ways to read attendance",
+    label: "Ways to slice attendance",
     detail: "Centre, classroom, and child",
   },
   {
     value: 4,
     suffix: "",
-    label: "Meal slots, one weekly plan",
+    label: "Meal slots, one tidy plan",
     detail: "Breakfast through afternoon snack",
   },
   {
     value: 1,
     suffix: "",
-    label: "Log for the whole centre",
-    detail: "Staff write it. Everyone else can see it.",
+    label: "Record everyone trusts",
+    detail: "Staff write it once. Everyone else just reads.",
   },
 ] as const;
 
@@ -59,13 +59,13 @@ export const STORY_SECTIONS = [
   {
     id: "staff-home",
     topic: "Classroom home",
-    kicker: "On the floor",
-    title: "Who's in, who's out, and whether the class is on a trip.",
-    body: "Teachers open the room and see the present count against the roster. When the group leaves the building, Outing Mode takes a destination and a return time, then tells parents so pickup can move with you. Tap a child for allergies, emergency contacts, and today's activity.",
+    kicker: "Life on the floor",
+    title: "Who's here, who's out, and who's off to the park.",
+    body: "Open your room and the present count is already there, matched against the roster. Heading out? Outing Mode takes the destination and a return time, then tells parents so pickup meets you where you actually are. Tap any child for allergies, emergency contacts, and how their day is going.",
     bullets: [
-      "Present count on every child, against the room roster",
-      "Outing Mode with destination, return time, and parent notice",
-      "Child profiles one tap away for medical and emergency details",
+      "A present count you can trust at a glance",
+      "Outing Mode: destination, return time, parents in the loop",
+      "Allergies and emergency contacts one tap from your thumb",
     ],
     screenshot: {
       stem: "staff-home",
@@ -77,13 +77,13 @@ export const STORY_SECTIONS = [
   {
     id: "staff-log",
     topic: "Bulk Log",
-    kicker: "The whole room, one save",
-    title: "Check in the room before the coats are hung.",
-    body: "Bulk Log covers Check In, Meals, and Naps. Select All when the room fills, then save with the current time or pick one. Mid-day Exit and Return cover appointments and sick leave. Nap timers start and stop for the children you selected, including more than one rest in a day.",
+    kicker: "One save, whole room",
+    title: "Check the room in before the last coat is hung.",
+    body: "Bulk Log covers Check In, Meals, and Naps. Hit Select All when everyone floods in, then save on the current time or pick your own. Appointments and early pickups get Mid-day Exit and Return. Nap timers run for one sleeper or the whole room, and yes, more than one nap a day.",
     bullets: [
-      "Check In, Check Out, Mid-day Exit, and Return, with notes",
-      "Meal intake in 25% steps, with infant milk in ounces",
-      "Start and end nap timers for one child or the selected room",
+      "Check In, Check Out, Mid-day Exit, and Return, notes included",
+      "Meal intake in 25% steps, infant milk in ounces",
+      "Nap timers for one child or every mat in the room",
     ],
     screenshot: {
       stem: "staff-log",
@@ -96,12 +96,12 @@ export const STORY_SECTIONS = [
     id: "parent-communicate",
     topic: "Communicate",
     kicker: "What families actually read",
-    title: "Classroom notes land in the feed parents already open.",
-    body: "Parents open Communicate and get a chronological card feed: public notes for the room or the centre, and private notes for their child. Teachers and directors write those cards. There is no second newsletter to keep in sync.",
+    title: "Notes that land where parents are already looking.",
+    body: "Communicate is a clean card feed: room and centre notes out in the open, a quiet word about one child kept private. Teachers and directors write the cards, so there's no newsletter to rebuild every Friday afternoon.",
     bullets: [
-      "Public and private tabs, scoped to a classroom or the whole centre",
-      "Date filter when a family needs last week, not only today",
-      "New notes route into the same feed, including from the director desk",
+      "Public and private tabs, per classroom or centre-wide",
+      "A date filter for the parent asking about last Tuesday",
+      "Notes from the director desk land in the same feed",
     ],
     screenshot: {
       stem: "parent-communicate",
@@ -114,12 +114,12 @@ export const STORY_SECTIONS = [
     id: "menu-planner",
     topic: "Menu Planner",
     kicker: "The week on a grid",
-    title: "Plan Monday's lunch. Parents see it Monday morning.",
-    body: "Directors set Breakfast, Morning Snack, Lunch, and Afternoon Snack, Monday through Friday. Type the grid or upload a weekly PDF. The same slots appear on the parent home as today's menu, so the kitchen and the families are looking at one plan.",
+    title: "Plan Monday's lunch once. Monday takes care of itself.",
+    body: "Fill Breakfast, Morning Snack, Lunch, and Afternoon Snack from Monday to Friday. Type straight into the grid or drop in the weekly PDF you already make. The same slots show up on parent home as today's menu, so the kitchen and the families are finally reading one plan.",
     bullets: [
       "Week picker with a five-day meal grid",
-      "PDF upload into the planner, then save the week",
-      "Parent home reads the posted menu. No second copy on the fridge.",
+      "Upload the PDF you already have, then save the week",
+      "Today's menu on parent home. Nothing taped to the door.",
     ],
     screenshot: {
       stem: "menu-planner",
@@ -132,12 +132,12 @@ export const STORY_SECTIONS = [
     id: "reports",
     topic: "Attendance reports",
     kicker: "How directors already think",
-    title: "Centre, classroom, or child. Then export the range.",
-    body: "The Attendance Reporting Matrix groups occupancy the way you already talk about it: centre-wide, classroom by classroom, or child by child. Filter the dates, scan late and early flags, and download CSV. These are the same check-ins teachers saved in Bulk Log.",
+    title: "Centre, classroom, or child. Pick a lens and export.",
+    body: "Attendance groups the way you already talk about it in a staff meeting: the whole centre, room by room, or one child. Filter the dates, spot the late arrivals and early pickups, then download the CSV for whoever's asking. Same check-ins your teachers saved in Bulk Log.",
     bullets: [
-      "Centre-wide, classroom-level, and child-level views",
-      "Date range up to a year, with a classroom filter",
-      "Download CSV for the selected view",
+      "Centre-wide, classroom, and child views",
+      "Any date range up to a year, filtered by room",
+      "CSV download for the view you're looking at",
     ],
     screenshot: {
       stem: "reports",
@@ -150,12 +150,12 @@ export const STORY_SECTIONS = [
     id: "staff-management",
     topic: "Staff & timesheets",
     kicker: "The people in the rooms",
-    title: "Invite the team. Approve the hours that hit payroll.",
-    body: "Staff Management is the roster: Teachers, substitutes and kitchen staff, assigned to rooms, with On duty where it matters. Directors review pending timesheets, approve or reject, and keep the history on Staff Timesheets.",
+    title: "Invite the team. Approve the hours. Get back to the floor.",
+    body: "Your roster in one place: teachers, substitutes, and kitchen staff, assigned to rooms, with On duty right on the card. Pending timesheets wait for your approve or reject, and the history stays put for payroll week.",
     bullets: [
-      "Invite staff by type: lead, assistant, cook, or substitute",
-      "Room lead and assistant assignment, with On duty on the card",
-      "Timesheet approval for hourly substitutes",
+      "Invite by role: lead, assistant, cook, or substitute",
+      "Room assignments with On duty on the card",
+      "Timesheet approval before payroll, not after",
     ],
     screenshot: {
       stem: "staff-management",
@@ -168,12 +168,12 @@ export const STORY_SECTIONS = [
     id: "ai-insights",
     topic: "AI Insights",
     kicker: "From the logs the rooms already keep",
-    title: "Open one screen. Know what needs you.",
-    body: "AI Insights sits on the director dashboard and reads the records staff already save. You get a briefing for the window you choose, and a short list of follow-ups, without recapping the week by hand.",
+    title: "Your Monday recap, already written.",
+    body: "AI Insights reads the records your team already saves and hands back a short briefing for the window you choose, plus the follow-ups actually worth your morning. No new forms, no week-in-review spreadsheet.",
     bullets: [
-      "A briefing from the day the rooms already logged",
-      "Follow-ups you can take from the desk",
-      "No extra data entry so the AI has something to say",
+      "A briefing built from the day your rooms already logged",
+      "Follow-ups you can act on from the desk",
+      "Nothing extra to enter to make it worth opening",
     ],
     screenshot: {
       stem: "ai-insights",
@@ -186,12 +186,12 @@ export const STORY_SECTIONS = [
     id: "messages",
     topic: "Messages",
     kicker: "From the director desk",
-    title: "One note to the centre, a classroom, or a single family.",
-    body: "Messages is Send and Inbox. Write to all parents, one classroom, or one child's family. Broadcasts can be General, Holiday, Field trip, or Picture day. Private notes can be Supply, Health, or Clothing. Inbox lists everything sent from the centre, including teacher notes.",
+    title: "The whole centre, one room, or one family.",
+    body: "Send and Inbox, that's the whole idea. Write to every parent, a single classroom, or one child's family. Tag it so families know at a glance whether it's picture day or a nudge about spare clothes. Inbox keeps everything the centre has sent, teacher notes included.",
     bullets: [
-      "Audience: whole daycare, one classroom, or one child's parents",
-      "A category on the card so families know why it arrived",
-      "Inbox with date, scope, classroom, and child filters",
+      "Audience: whole daycare, one classroom, or one family",
+      "A category on every card, so nobody has to guess",
+      "Inbox filters by date, scope, classroom, and child",
     ],
     screenshot: {
       stem: "messages",
@@ -204,12 +204,12 @@ export const STORY_SECTIONS = [
     id: "parent-history",
     topic: "History",
     kicker: "After pickup",
-    title: "Last week's naps and lunches, without asking at the door.",
-    body: "Once the centre publishes the day, parents can look back at the same naps, meals, and attendance the teachers logged. Switch 1 Day, 7 Days, or 30 Days. It is the room's record, released when the care day wraps up.",
+    title: "“How did she nap?” Answered before anyone asks.",
+    body: "When you publish the day, families can look back at the same naps, meals, and attendance your teachers logged. One day, seven days, or thirty. It's the room's record, released on your schedule.",
     bullets: [
       "1 Day, 7 Days, or 30 Days on the same child",
-      "Meal intake readouts from the staff log",
-      "Nap totals and attendance trend",
+      "Meal intake straight from the staff log",
+      "Nap totals and the attendance trend",
     ],
     screenshot: {
       stem: "parent-history",
@@ -222,12 +222,12 @@ export const STORY_SECTIONS = [
     id: "child-profile",
     topic: "Child profile",
     kicker: "On file, on the floor",
-    title: "Allergies, pickups, and today's activity on one card.",
-    body: "Staff open a child from the classroom list: attendance, naps, meals, medical allergies, dietary notes, emergency contacts, authorized pickups, and special instructions. Parents open the same child from Profile and see the classroom, status, and the details the centre keeps on file.",
+    title: "Allergies, pickups, and the day so far. One card.",
+    body: "Open a child from your room list and it's all there: attendance, naps, meals, allergies, dietary notes, emergency contacts, authorized pickups, and any special instructions. Parents see the same profile, so the details on file are the details everyone's working from.",
     bullets: [
-      "Medical allergies and dietary restrictions on the profile",
-      "Emergency contacts and authorized pickups within reach on the floor",
-      "Today's Activity timeline from attendance, nap, and meal logs",
+      "Allergies and dietary needs right at the top",
+      "Emergency contacts and authorized pickups, no filing cabinet",
+      "Today's activity, built from the logs your team saved",
     ],
     screenshot: {
       stem: "child-profile",
@@ -253,8 +253,8 @@ export const HERO_SHOTS = {
 
 export const ROLES_INTRO = {
   kicker: "Who it's for",
-  title: "Four jobs. One day's record.",
-  body: "Directors, teachers, kitchen, and parents each get tools that fit how they work. Underneath, it is the same attendance, the same meals, and the same messages.",
+  title: "Four jobs. One day, told once.",
+  body: "Directors, teachers, kitchen, and families each get the view that fits their hands. Underneath, it's the same attendance, the same meals, the same notes.",
 } as const;
 
 export const ROLES = [
@@ -262,47 +262,47 @@ export const ROLES = [
     id: "director",
     title: "Directors",
     kicker: "Admin web",
-    summary: "The centre in view, without standing in the hallway.",
+    summary: "The whole centre, without pacing the hallway.",
     points: [
       "Classroom Management: live tallies, Outing Mode, new learning spaces",
-      "Invite staff and parents. Assign leads and assistants.",
-      "Attendance reports at centre, classroom, and child",
-      "Timesheet approval, Menu Planner, Messages, and AI Insights",
+      "Invite staff and parents. Assign your leads and assistants.",
+      "Attendance at centre, classroom, and child level",
+      "Timesheets, Menu Planner, Messages, and AI Insights",
     ],
   },
   {
     id: "staff",
     title: "Teachers",
     kicker: "Staff mobile",
-    summary: "Log the day from the room, not a back-office PC.",
+    summary: "Log the day from the room, not the office PC.",
     points: [
-      "Classroom home with present tally and Outing Mode",
+      "Classroom home with the present tally and Outing Mode",
       "Bulk Log for attendance, nap timers, and meal intake",
-      "Communicate: classroom notes or a private note to a family",
-      "Child profiles with allergies, emergency contacts, and Quick Log",
+      "Communicate: a classroom note or a private word to one family",
+      "Child profiles with allergies, contacts, and Quick Log",
     ],
   },
   {
     id: "parent",
     title: "Parents",
     kicker: "Family mobile",
-    summary: "Know how the day went before you reach the door.",
+    summary: "Know how the day went before the car door shuts.",
     points: [
-      "Home: check-in, Outing active, raise an absence, today's menu",
-      "Communicate feed for classroom, centre-wide, and private notes",
+      "Home: check-in, outings, absences, and today's menu",
+      "Communicate feed for classroom, centre, and private notes",
       "History across 1, 7, and 30 days",
-      "Child profile for the record the centre keeps on file",
+      "The profile the centre keeps on file",
     ],
   },
   {
     id: "cook",
     title: "Kitchen",
     kicker: "Menus & dietary care",
-    summary: "The week's meals live where rooms and families already look.",
+    summary: "This week's meals, where rooms and families already look.",
     points: [
       "Weekly Menu Planner: breakfast, morning snack, lunch, afternoon snack",
-      "PDF into the grid, then the same slots on parent home",
-      "Allergies and dietary restrictions on each child's profile",
+      "PDF into the grid, then straight onto parent home",
+      "Allergies and dietary restrictions on every child's profile",
       "Teachers log intake in 25% steps. Infant milk in ounces.",
     ],
   },
@@ -310,66 +310,66 @@ export const ROLES = [
 
 export const CLASSROOM_DEMO = {
   kicker: "Try a classroom",
-  title: "Tap the room. Watch the log move.",
-  body: "A live mock of the staff log. No account needed. Toggle attendance, start a nap, cycle lunch, or send Outing Mode. Families see check-in and outings in the moment. Naps and meals publish with the day.",
+  title: "Go ahead, tap the room.",
+  body: "A working mock of the staff log, no account needed. Check someone in, start a nap, nudge lunch along, send the class to the park. Families see check-in and outings right away. Naps and meals go out when you publish the day.",
 } as const;
 
 export const HOW_IT_WORKS_INTRO = {
   kicker: "How a day runs",
-  title: "Write it once. Release it when you're ready.",
+  title: "Write it once. Share it when you're ready.",
 } as const;
 
 export const STEPS = [
   {
-    title: "Open the room",
-    body: "Teachers Select All and Check In, start nap timers when rest begins, and keep allergy-aware profiles one tap away.",
+    title: "Coats off, room in",
+    body: "Select All and check the room in, start nap timers when the mats come out, and keep allergy notes a tap from your thumb.",
   },
   {
-    title: "Publish the day on your clock",
-    body: "Naps, meals, and the day's care log stay in the room until the centre releases them, at the end of the day or at a time you set. Outing Mode and announcements can notify families as soon as staff choose to send them. Directors already have the live rooms.",
+    title: "Publish on your clock",
+    body: "Naps, meals, and the day's care log stay in the room until you release them, at the end of the day or a time you set. Outings and announcements can go out the moment staff hit send. Directors see the live rooms all along.",
   },
   {
-    title: "Close with a record",
-    body: "Attendance layers, substitute timesheets, and AI Insights turn today's logs into tomorrow's follow-up.",
+    title: "Doors closed, day recorded",
+    body: "Attendance, substitute hours, and AI Insights turn tonight's logs into tomorrow's follow-up.",
   },
 ] as const;
 
 export const AI_SECTION = {
   title: "The week, already read for you",
-  body: "Directors open AI Insights and get a briefing from the logs the rooms already keep. Where the centre is holding, and where a conversation might help. You still decide what to do.",
+  body: "Directors open AI Insights and get a plain-English briefing from the logs the rooms already keep: where the centre is steady, and where a quick conversation would help. Every call is still yours.",
 } as const;
 
 export const AI_SIGNALS = [
   {
-    title: "See the centre first",
-    body: "A picture of the window you choose, without walking every hallway or exporting a report to find it.",
+    title: "The centre at a glance",
+    body: "A read on whatever window you choose, without pacing three hallways or exporting two reports to find it.",
   },
   {
-    title: "Know the next conversation",
-    body: "When a room or a family needs a follow-up, it sits on a short list instead of hiding in last week's numbers.",
+    title: "The next conversation, surfaced",
+    body: "When a room or a family could use a follow-up, it's on a short list instead of buried in last month's numbers.",
   },
   {
-    title: "Stay in the product",
-    body: "Insights open the same classrooms, messages, and reports you already use. Nothing extra to learn, and nothing extra to log.",
+    title: "No homework",
+    body: "It runs on the logs your team already saves, and opens the same classrooms, messages, and reports you use every day.",
   },
 ] as const;
 
 export const CTA = {
   kicker: "See it with your kind of day",
-  title: "Walk the product against rooms that look like yours.",
-  body: "We'll go through Classroom Management, Bulk Log, and the parent home with menus, messages, and attendance the way a real centre runs them.",
+  title: "Bring us a Tuesday. We'll walk it with you.",
+  body: "We'll go through the director dashboard, Bulk Log, and the parent home using rooms, menus, and messages that look like yours.",
   bullets: [
     "Director tour: classrooms, reports, Menu Planner, Messages, AI Insights",
     "Staff and parent mobile: home, Bulk Log, Communicate, History",
-    "Come with a typical day. We'll map the product onto it.",
+    "Bring a typical day. We'll map the product onto it.",
   ],
   submit: "Book a walkthrough",
-  successTitle: "We'll be in touch.",
+  successTitle: "Talk soon.",
 } as const;
 
 export const FOOTER = {
   blurb:
-    "Childcare software for directors, teachers, kitchen teams, and families. The day's record, from the rooms to the people who need it.",
+    "Childcare software for directors, teachers, kitchen teams, and families. One day's record, shared with everyone who needs it.",
   legal: "Built for centres that want calmer days and clearer records.",
 } as const;
 

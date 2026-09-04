@@ -21,11 +21,11 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Acorns Nest | See every classroom while the day is still happening",
+    default: "Acorns Nest | See every classroom while the day is in full swing",
     template: "%s | Acorns Nest",
   },
   description:
-    "Acorns Nest is childcare software for directors, teachers, kitchens, and parents. Log attendance, naps, meals, and messages from the rooms. Families see the same day.",
+    "Acorns Nest is childcare software for directors, teachers, kitchens, and parents. Log attendance, naps, meals, and messages from the room, then publish the day on your own clock.",
   keywords: [
     "childcare management",
     "daycare software",

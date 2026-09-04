@@ -44,7 +44,7 @@ export function SiteHeader() {
         style={{ transform: `scaleX(${progress})` }}
         aria-hidden
       />
-      <div className="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-5 sm:px-8">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 sm:h-[72px] sm:px-8">
         <a href="#top" className="relative z-10" onClick={() => setOpen(false)}>
           <BrandMark size="sm" />
         </a>
@@ -81,18 +81,18 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div
-        className={`md:hidden ${open ? "pointer-events-auto" : "pointer-events-none"}`}
-      >
+      <div className="md:hidden">
         <div
-          className={`fixed inset-0 top-[72px] bg-ink/30 transition-opacity ${
-            open ? "opacity-100" : "opacity-0"
+          className={`fixed inset-0 top-14 bg-ink/30 transition-opacity sm:top-[72px] ${
+            open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
           }`}
           onClick={() => setOpen(false)}
         />
         <div
-          className={`relative border-t border-border bg-cream px-5 pb-6 pt-4 transition-all ${
-            open ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
+          className={`absolute inset-x-0 top-full border-t border-border bg-cream px-5 pb-6 pt-4 shadow-lg transition-all ${
+            open
+              ? "pointer-events-auto translate-y-0 opacity-100"
+              : "pointer-events-none invisible -translate-y-3 opacity-0"
           }`}
         >
           <nav className="flex flex-col gap-1">
