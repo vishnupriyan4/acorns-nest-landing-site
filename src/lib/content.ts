@@ -374,6 +374,89 @@ export const FOOTER = {
   legal: "Built for centres that want calmer days and clearer records.",
 } as const;
 
+export const SUPPORT_TOPICS = [
+  "Signing in or invitations",
+  "Notifications",
+  "A record looks wrong",
+  "Account deletion",
+  "Privacy request",
+  "Something else",
+] as const;
+
+export const SUPPORT = {
+  kicker: "Support",
+  title: "Help with Acorns Nest.",
+  intro:
+    "Acorns Nest is used by licensed childcare centres. Your centre creates and manages the accounts, so your director can answer most questions fastest. For everything else, write to us and a person will read it.",
+  contact: {
+    email: "support@acornsnest.com",
+    hours: "Monday to Friday, 9am–5pm Atlantic Time",
+    reply: "We reply within one business day.",
+    address: [
+      "Acorns Nest, Inc.",
+      "5651 Ogilvie Street, Unit 411",
+      "Halifax, Nova Scotia B3H 1B9",
+      "Canada",
+    ],
+  },
+  start: {
+    title: "Getting into the app",
+    steps: [
+      {
+        title: "Your centre invites you",
+        body: "There is no public sign-up. Your director adds you as a parent, teacher, kitchen staff, or substitute, and an invitation arrives at the email address the centre has on file.",
+      },
+      {
+        title: "Set a password and sign in",
+        body: "Follow the link in the invitation to choose a password, then sign in with the same email. Parents land on their child's home screen; staff pick a classroom.",
+      },
+      {
+        title: "Allow notifications",
+        body: "Notifications carry check-in, outing, and announcement alerts. If you skipped the prompt, turn Acorns Nest back on under Settings, Notifications on your device.",
+      },
+    ],
+  },
+  faqs: [
+    {
+      question: "I never received my invitation.",
+      answer:
+        "Check your spam folder for a message from Acorns Nest, then ask your director to confirm the email address on your account and resend. Invitations go to the address the centre holds on file, which is often a work address for staff.",
+    },
+    {
+      question: "I can't sign in or I forgot my password.",
+      answer:
+        "Use Forgot password on the sign-in screen and we'll email a reset link. If no email arrives within a few minutes, your account may be under a different address, so ask your director to check.",
+    },
+    {
+      question: "Something in my child's record looks wrong.",
+      answer:
+        "Naps, meals, and attendance are logged by the teachers in the room, and allergies, contacts, and pickup lists are maintained by the centre. Raise it with your centre first, since they can correct it directly. Write to us if a correction won't save.",
+    },
+    {
+      question: "Notifications aren't arriving.",
+      answer:
+        "Confirm notifications are enabled for Acorns Nest in your device settings, then sign out and back in so the app can re-register. Note that naps, meals, and the full care log are released when staff publish the day, so they are not sent as they happen.",
+    },
+    {
+      question: "Who can see information about my child?",
+      answer:
+        "Staff assigned to your child's classroom, your centre's director, and the guardians on that child's record. Acorns Nest does not sell personal information and does not use it for advertising. Our Privacy Policy sets out the detail.",
+    },
+    {
+      question: "How do I delete my account?",
+      answer:
+        "Because accounts are created by your centre, deletion is handled by request rather than in the app. Email support@acornsnest.com from the address on the account, or ask your director to submit it, and include the account holder's name and the centre name.",
+    },
+  ],
+  form: {
+    title: "Send us a message",
+    body: "Tell us what happened and which centre you're with. If you're writing about a specific child, use their first name only.",
+    submit: "Send message",
+    successTitle: "Message sent.",
+    successBody: "We'll reply to the email address you left, usually within one business day.",
+  },
+} as const;
+
 export const SCREENSHOT_STEMS = [
   HERO_SHOTS.classrooms.stem,
   HERO_SHOTS.parentHome.stem,

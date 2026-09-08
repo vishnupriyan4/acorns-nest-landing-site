@@ -11,6 +11,7 @@ const FOOTER_LINKS = [
 ] as const;
 
 const LEGAL_LINKS = [
+  { href: "/support", label: "Support" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Use" },
 ] as const;
