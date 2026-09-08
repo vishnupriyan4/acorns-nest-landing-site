@@ -1,7 +1,8 @@
+// Root-relative so the header keeps working from /privacy and /terms.
 export const NAV_LINKS = [
-  { href: "#product", label: "Product" },
-  { href: "#roles", label: "Who it's for" },
-  { href: "#ai", label: "Insights" },
+  { href: "/#product", label: "Product" },
+  { href: "/#roles", label: "Who it's for" },
+  { href: "/#ai", label: "Insights" },
 ] as const;
 
 export const HERO = {

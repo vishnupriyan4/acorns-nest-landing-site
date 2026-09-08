@@ -1,11 +1,18 @@
+import Link from "next/link";
+
 import { BrandMark } from "@/components/brand-mark";
 import { FOOTER } from "@/lib/content";
 
 const FOOTER_LINKS = [
-  { href: "#product", label: "Product" },
-  { href: "#roles", label: "Roles" },
-  { href: "#ai", label: "Insights" },
-  { href: "#demo", label: "Walkthrough" },
+  { href: "/#product", label: "Product" },
+  { href: "/#roles", label: "Roles" },
+  { href: "/#ai", label: "Insights" },
+  { href: "/#demo", label: "Walkthrough" },
+] as const;
+
+const LEGAL_LINKS = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Use" },
 ] as const;
 
 export function SiteFooter() {
@@ -18,16 +25,25 @@ export function SiteFooter() {
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-muted">
           {FOOTER_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className="transition hover:text-primary">
+            <Link key={link.href} href={link.href} className="transition hover:text-primary">
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
       <div className="border-t border-border/60">
-        <p className="mx-auto max-w-6xl px-5 py-5 text-xs text-muted sm:px-8">
-          © {new Date().getFullYear()} Acorns Nest. {FOOTER.legal}
-        </p>
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-5 text-xs text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
+          <p>
+            © {new Date().getFullYear()} Acorns Nest. {FOOTER.legal}
+          </p>
+          <nav className="flex flex-wrap gap-x-5 gap-y-2 font-medium">
+            {LEGAL_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className="transition hover:text-primary">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </footer>
   );

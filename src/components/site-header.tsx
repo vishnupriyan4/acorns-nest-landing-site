@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { BrandMark } from "@/components/brand-mark";
@@ -45,29 +46,29 @@ export function SiteHeader() {
         aria-hidden
       />
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5 sm:h-[72px] sm:px-8">
-        <a href="#top" className="relative z-10" onClick={() => setOpen(false)}>
+        <Link href="/" className="relative z-10" onClick={() => setOpen(false)}>
           <BrandMark size="sm" />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-muted transition-colors hover:text-primary"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden md:block">
-          <a
-            href="#demo"
+          <Link
+            href="/#demo"
             className="inline-flex rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-hover"
           >
             {HERO.primaryCta}
-          </a>
+          </Link>
         </div>
 
         <button
@@ -97,22 +98,22 @@ export function SiteHeader() {
         >
           <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className="rounded-lg px-3 py-3 text-sm font-medium text-foreground hover:bg-primary-muted hover:text-primary"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#demo"
+            <Link
+              href="/#demo"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-lg bg-primary px-3 py-3 text-center text-sm font-semibold text-primary-foreground"
             >
               {HERO.primaryCta}
-            </a>
+            </Link>
           </nav>
         </div>
       </div>

@@ -19,7 +19,10 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://acornsnest.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Acorns Nest | See every classroom while the day is in full swing",
     template: "%s | Acorns Nest",
