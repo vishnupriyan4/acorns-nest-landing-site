@@ -3,11 +3,12 @@
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import { StoreBadges } from "@/components/store-badges";
 import { BrowserFrame, PhoneFrame } from "@/components/ui/device-frames";
 import { ProductScreenshot } from "@/components/ui/product-screenshot";
 import { useCountUp } from "@/hooks/use-count-up";
 import { useInView } from "@/hooks/use-in-view";
-import { STATS, HERO, HERO_SHOTS } from "@/lib/content";
+import { APP_STORES, STATS, HERO, HERO_SHOTS } from "@/lib/content";
 
 function Stat({
   value,
@@ -102,6 +103,15 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             >
               {HERO.secondaryCta}
             </a>
+          </div>
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <p className="text-xs font-medium text-muted">
+              {APP_STORES.heroLabel}{" "}
+              <a href="#get-the-app" className="font-semibold text-primary hover:underline">
+                scan a code
+              </a>
+            </p>
+            <StoreBadges className="justify-center" />
           </div>
         </div>
 

@@ -2,6 +2,7 @@ import { Clock, Mail, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { StoreBadges } from "@/components/store-badges";
 import { SupportForm } from "@/components/support/support-form";
 import { Reveal } from "@/components/ui/reveal";
 import { SUPPORT } from "@/lib/content";
@@ -37,6 +38,10 @@ export default function SupportPage() {
           <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
             {SUPPORT.intro}
           </p>
+          <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+            Install the app
+          </p>
+          <StoreBadges className="mt-3" />
         </Reveal>
 
         <Reveal delayMs={60}>

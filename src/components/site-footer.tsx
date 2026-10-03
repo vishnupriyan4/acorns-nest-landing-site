@@ -1,11 +1,13 @@
 import Link from "next/link";
 
 import { BrandMark } from "@/components/brand-mark";
+import { StoreBadges } from "@/components/store-badges";
 import { FOOTER } from "@/lib/content";
 
 const FOOTER_LINKS = [
   { href: "/#product", label: "Product" },
   { href: "/#roles", label: "Roles" },
+  { href: "/#get-the-app", label: "Get the app" },
   { href: "/#ai", label: "Insights" },
   { href: "/#demo", label: "Walkthrough" },
 ] as const;
@@ -23,6 +25,7 @@ export function SiteFooter() {
         <div className="max-w-sm">
           <BrandMark size="sm" />
           <p className="mt-3 text-sm leading-6 text-muted">{FOOTER.blurb}</p>
+          <StoreBadges className="mt-5" />
         </div>
         <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-muted">
           {FOOTER_LINKS.map((link) => (

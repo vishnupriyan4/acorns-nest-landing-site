@@ -3,7 +3,41 @@ export const NAV_LINKS = [
   { href: "/#product", label: "Product" },
   { href: "/#roles", label: "Who it's for" },
   { href: "/#ai", label: "Insights" },
+  { href: "/#get-the-app", label: "Get the app" },
 ] as const;
+
+export const APP_STORES = {
+  kicker: "Now on the App Store and Google Play",
+  title: "Get Acorns Nest on the phone already in the room.",
+  body: "Scan a code with your camera, or tap the store that matches your phone. Your centre creates the account, so install the app, then sign in with the invitation your director sent.",
+  heroLabel: "Teachers and families",
+  listings: [
+    {
+      id: "app-store",
+      name: "App Store",
+      platform: "iPhone and iPad",
+      href: "https://apps.apple.com/ca/app/acorns-nest/id6806698503",
+      badgeSrc: "/stores/app-store-badge.svg",
+      badgeAlt: "Download on the App Store",
+      badgeWidth: 120,
+      badgeHeight: 40,
+      qrSrc: "/stores/qr-app-store.png",
+      qrAlt: "QR code that opens Acorns Nest on the App Store",
+    },
+    {
+      id: "google-play",
+      name: "Google Play",
+      platform: "Android phones and tablets",
+      href: "https://play.google.com/store/apps/details?id=com.acornsnest.app",
+      badgeSrc: "/stores/google-play-badge.png",
+      badgeAlt: "Get it on Google Play",
+      badgeWidth: 155,
+      badgeHeight: 60,
+      qrSrc: "/stores/qr-play-store.png",
+      qrAlt: "QR code that opens Acorns Nest on Google Play",
+    },
+  ],
+} as const;
 
 export const HERO = {
   eyebrow: "Built for the busiest room in the building",

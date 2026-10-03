@@ -1,4 +1,5 @@
 import { AiSection } from "@/components/ai-section";
+import { AppStores } from "@/components/app-stores";
 import { CapabilityMarquee } from "@/components/capability-marquee";
 import { CtaSection } from "@/components/cta-section";
 import { Hero } from "@/components/hero";
@@ -17,6 +18,7 @@ export default function HomePage() {
         classroomsSrc={shots.classrooms}
         parentHomeSrc={shots["parent-home"]}
       />
+      <AppStores />
       <CapabilityMarquee />
       <StorySections shots={shots} />
       <InteractiveDemo />
