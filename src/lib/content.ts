@@ -9,7 +9,7 @@ export const NAV_LINKS = [
 export const APP_STORES = {
   kicker: "Now on the App Store and Google Play",
   title: "Get Acorns Nest on the phone already in the room.",
-  body: "Scan a code with your camera, or tap the store that matches your phone. Your centre creates the account, so install the app, then sign in with the invitation your director sent.",
+  body: "Scan a code with your camera, or tap the store that matches your phone. Your centre creates the account. Accept the invite with the code in your email, install the app, then sign in.",
   heroLabel: "Teachers and families",
   listings: [
     {
@@ -441,8 +441,8 @@ export const SUPPORT = {
         body: "There is no public sign-up. Your director adds you as a parent, teacher, kitchen staff, or substitute, and an invitation arrives at the email address the centre has on file.",
       },
       {
-        title: "Set a password and sign in",
-        body: "Follow the link in the invitation to choose a password, then sign in with the same email. Parents land on their child's home screen; staff pick a classroom.",
+        title: "Enter the code and sign in",
+        body: "Open acornsnest.com/accept-invite, enter the code from the invitation, and choose a password. Then install the app and sign in with the same email. Parents land on their child's home screen; staff pick a classroom.",
       },
       {
         title: "Allow notifications",
@@ -454,7 +454,7 @@ export const SUPPORT = {
     {
       question: "I never received my invitation.",
       answer:
-        "Check your spam folder for a message from Acorns Nest, then ask your director to confirm the email address on your account and resend. Invitations go to the address the centre holds on file, which is often a work address for staff.",
+        "Check your spam folder for a message from Acorns Nest, then ask your director to confirm the email address on your account and resend. The message contains a code, not a link. Enter it at acornsnest.com/accept-invite. Invitations go to the address the centre holds on file, which is often a work address for staff.",
     },
     {
       question: "I can't sign in or I forgot my password.",
