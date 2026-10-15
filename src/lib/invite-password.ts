@@ -10,9 +10,16 @@ function bytesToBase64(bytes: Uint8Array): string {
   return btoa(binary);
 }
 
-function base64ToBytes(value: string): Uint8Array {
+function asBufferSource(bytes: Uint8Array): Uint8Array<ArrayBuffer> {
+  const buffer = new ArrayBuffer(bytes.byteLength);
+  const copy = new Uint8Array(buffer);
+  copy.set(bytes);
+  return copy;
+}
+
+function base64ToBytes(value: string): Uint8Array<ArrayBuffer> {
   const binary = atob(value);
-  const bytes = new Uint8Array(binary.length);
+  const bytes = new Uint8Array(new ArrayBuffer(binary.length));
   for (let index = 0; index < binary.length; index += 1) {
     bytes[index] = binary.charCodeAt(index);
   }
@@ -31,12 +38,12 @@ export async function encryptInvitePassword(
     ["wrapKey"],
   );
   const aesKey = await crypto.subtle.generateKey({ name: "AES-GCM", length: 256 }, true, ["encrypt"]);
-  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const iv = asBufferSource(crypto.getRandomValues(new Uint8Array(12)));
   const ciphertext = new Uint8Array(
     await crypto.subtle.encrypt(
       { name: "AES-GCM", iv },
       aesKey,
-      new TextEncoder().encode(password),
+      asBufferSource(new TextEncoder().encode(password)),
     ),
   );
   const wrapped = new Uint8Array(
