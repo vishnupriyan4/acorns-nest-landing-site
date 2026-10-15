@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 
 import { AcceptInviteForm } from "@/components/invite/accept-invite-form";
 import { Reveal } from "@/components/ui/reveal";
@@ -19,12 +18,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const dynamic = "force-dynamic";
-
-export default async function AcceptInvitePage() {
-  const jar = await cookies();
-  const resumePassword = Boolean(jar.get("an_invite_session")?.value);
-
+export default function AcceptInvitePage() {
   return (
     <main className="pt-14 sm:pt-[72px]">
       <div className="mx-auto max-w-lg px-5 py-14 sm:px-8 sm:py-20">
@@ -42,7 +36,7 @@ export default async function AcceptInvitePage() {
         </Reveal>
         <Reveal delayMs={60}>
           <div className="mt-8">
-            <AcceptInviteForm resumePassword={resumePassword} />
+            <AcceptInviteForm />
           </div>
         </Reveal>
       </div>

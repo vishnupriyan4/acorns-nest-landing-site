@@ -1,19 +1,16 @@
 "use client";
 
 import { CheckCircle2, Loader2 } from "lucide-react";
-import { useActionState, useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 
-import { acceptInvite, finishInvitePassword, type AcceptInviteState } from "@/actions/accept-invite";
 import { StoreBadges } from "@/components/store-badges";
+import { encryptInvitePassword } from "@/lib/invite-password";
 
 const GET_THE_APP_URL = "https://acornsnest.com/#get-the-app";
+const API_BASE = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "").replace(/\/$/, "");
 
 const fieldClass =
   "w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm outline-none transition focus:border-border-focus focus:bg-primary-muted";
-
-type AcceptInviteFormProps = {
-  resumePassword?: boolean;
-};
 
 function inviteEmailFromLocation(): string {
   const query = window.location.search.replace(/^\?/, "");
@@ -28,29 +25,35 @@ function inviteEmailFromLocation(): string {
   return "";
 }
 
-export function AcceptInviteForm({ resumePassword = false }: AcceptInviteFormProps) {
-  const [accepted, acceptAction, acceptPending] = useActionState(acceptInvite, null);
-  const [finished, finishAction, finishPending] = useActionState(finishInvitePassword, null);
-  const state: AcceptInviteState | null = finished ?? accepted;
-  const pending = acceptPending || finishPending;
+function errorDetail(body: unknown): string {
+  if (!body || typeof body !== "object" || !("detail" in body)) {
+    return "The invite could not be completed. Try again.";
+  }
+  const detail = (body as { detail?: unknown }).detail;
+  if (typeof detail === "string" && detail.trim()) return detail;
+  return "The invite could not be completed. Try again.";
+}
+
+export function AcceptInviteForm() {
   const [email, setEmail] = useState<string | null>(null);
   const [code, setCode] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [done, setDone] = useState(false);
 
   useEffect(() => {
     setEmail(inviteEmailFromLocation());
   }, []);
-  const showPasswordRetry =
-    !state?.ok && (state?.step === "password" || (resumePassword && state == null));
 
-  if (state?.ok) {
+  if (done) {
     return (
       <div className="rounded-2xl border border-border bg-background p-6 text-center shadow-lg sm:p-8">
         <CheckCircle2 className="mx-auto size-10 text-tertiary" />
         <h2 className="mt-4 font-brand text-2xl tracking-tight text-ink">You're in.</h2>
         <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-muted">
-          Install Acorns Nest, then sign in with the email you just used and the password you
+          Install Acorns Nest, then sign in with the email on this invitation and the password you
           chose. Staff and parents use the same app.
         </p>
         <a
@@ -62,30 +65,6 @@ export function AcceptInviteForm({ resumePassword = false }: AcceptInviteFormPro
         </a>
         <StoreBadges className="mt-5 justify-center" />
       </div>
-    );
-  }
-
-  if (showPasswordRetry) {
-    return (
-      <form
-        action={finishAction}
-        className="rounded-2xl border border-border bg-background p-6 shadow-lg sm:p-8"
-      >
-        <h2 className="font-brand text-xl tracking-tight text-ink sm:text-2xl">Choose a password</h2>
-        <p className="mt-3 text-sm leading-6 text-muted">
-          The code is accepted. Save a password so you can sign in after you install the app.
-        </p>
-        <div className="mt-6 space-y-4">
-          <PasswordFields
-            password={password}
-            confirm={confirm}
-            onPassword={setPassword}
-            onConfirm={setConfirm}
-          />
-          {state && !state.ok ? <ErrorText>{state.error}</ErrorText> : null}
-          <Submit pending={finishPending} label="Save password" pendingLabel="Saving…" />
-        </div>
-      </form>
     );
   }
 
@@ -105,9 +84,62 @@ export function AcceptInviteForm({ resumePassword = false }: AcceptInviteFormPro
     );
   }
 
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setError(null);
+    if (!/^\d{6}$/.test(code) && !/^\d{8}$/.test(code)) {
+      setError("Enter the 6-digit or 8-digit code from the invitation email.");
+      return;
+    }
+    if (password.length < 6) {
+      setError("Choose a password of at least 6 characters. You'll use it to sign in on the app.");
+      return;
+    }
+    if (password !== confirm) {
+      setError("Password and confirmation do not match.");
+      return;
+    }
+    if (!API_BASE) {
+      setError("Invite acceptance is not configured yet.");
+      return;
+    }
+
+    setPending(true);
+    try {
+      const keyResponse = await fetch(`${API_BASE}/auth/invite-password-key`);
+      const keyBody = (await keyResponse.json().catch(() => ({}))) as { public_key?: string };
+      if (!keyResponse.ok || !keyBody.public_key) {
+        setError(errorDetail(keyBody));
+        return;
+      }
+      const encryptedPassword = await encryptInvitePassword(keyBody.public_key, password);
+      const encryptedConfirm = await encryptInvitePassword(keyBody.public_key, confirm);
+      const response = await fetch(`${API_BASE}/auth/accept-invite`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          code,
+          password: encryptedPassword,
+          confirm: encryptedConfirm,
+        }),
+      });
+      const body = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setError(errorDetail(body));
+        return;
+      }
+      setDone(true);
+    } catch {
+      setError("The invite could not be completed. Check your connection and try again.");
+    } finally {
+      setPending(false);
+    }
+  }
+
   return (
     <form
-      action={acceptAction}
+      onSubmit={onSubmit}
       className="rounded-2xl border border-border bg-background p-6 shadow-lg sm:p-8"
     >
       <h2 className="font-brand text-xl tracking-tight text-ink sm:text-2xl">Enter your code</h2>
@@ -117,7 +149,6 @@ export function AcceptInviteForm({ resumePassword = false }: AcceptInviteFormPro
         link, so it stays valid if your email provider scans the message.
       </p>
       <div className="mt-6 space-y-4">
-        <input type="hidden" name="email" value={email} />
         <label className="block">
           <FieldLabel>Invitation code</FieldLabel>
           <input
@@ -142,8 +173,15 @@ export function AcceptInviteForm({ resumePassword = false }: AcceptInviteFormPro
           onPassword={setPassword}
           onConfirm={setConfirm}
         />
-        {state && !state.ok ? <ErrorText>{state.error}</ErrorText> : null}
-        <Submit pending={pending} label="Accept invite" pendingLabel="Checking code…" />
+        {error ? <ErrorText>{error}</ErrorText> : null}
+        <button
+          type="submit"
+          disabled={pending}
+          className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-hover disabled:opacity-70"
+        >
+          {pending ? <Loader2 className="size-4 animate-spin" /> : null}
+          {pending ? "Checking code…" : "Accept invite"}
+        </button>
       </div>
     </form>
   );
@@ -207,26 +245,5 @@ function ErrorText({ children }: { children: string }) {
     <p className="text-sm text-danger-text" role="alert">
       {children}
     </p>
-  );
-}
-
-function Submit({
-  pending,
-  label,
-  pendingLabel,
-}: {
-  pending: boolean;
-  label: string;
-  pendingLabel: string;
-}) {
-  return (
-    <button
-      type="submit"
-      disabled={pending}
-      className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-hover disabled:opacity-70"
-    >
-      {pending ? <Loader2 className="size-4 animate-spin" /> : null}
-      {pending ? pendingLabel : label}
-    </button>
   );
 }
