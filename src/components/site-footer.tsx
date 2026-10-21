@@ -9,6 +9,7 @@ const FOOTER_LINKS = [
   { href: "/#roles", label: "Roles" },
   { href: "/#get-the-app", label: "Get the app" },
   { href: "/#ai", label: "Insights" },
+  { href: "/#faq", label: "FAQ" },
   { href: "/#demo", label: "Walkthrough" },
 ] as const;
 
@@ -19,30 +20,79 @@ const LEGAL_LINKS = [
 ] as const;
 
 export function SiteFooter() {
+  const c = FOOTER.company;
+
   return (
     <footer className="border-t border-border/70 bg-cream">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between">
-        <div className="max-w-sm">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div>
           <BrandMark size="sm" />
-          <p className="mt-3 text-sm leading-6 text-muted">{FOOTER.blurb}</p>
+          <p className="mt-3 max-w-sm text-sm leading-6 text-muted">
+            {FOOTER.blurb}
+          </p>
           <StoreBadges className="mt-5" />
         </div>
-        <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-muted">
-          {FOOTER_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className="transition hover:text-primary">
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            Explore
+          </p>
+          <nav className="mt-3 flex flex-col gap-2 text-sm font-medium text-muted">
+            {FOOTER_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-primary"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        {/*
+          NAP (Name / Address / Phone / email). Rendered in plain text so
+          Google and AI crawlers can extract it. Mirrored in Organization
+          JSON-LD. Keep this in sync with /support, both app stores, and
+          any directory listings (Capterra, G2, Crunchbase, LinkedIn).
+        */}
+        <address className="not-italic">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            Contact
+          </p>
+          <p className="mt-3 text-sm font-semibold text-ink">{c.name}</p>
+          <p className="mt-1 text-sm leading-6 text-muted">
+            {c.streetAddress}
+            <br />
+            {c.locality}, {c.region} {c.postalCode}
+            <br />
+            {c.country}
+          </p>
+          <p className="mt-3 text-sm leading-6 text-muted">
+            <a
+              href={`mailto:${c.email}`}
+              className="font-medium text-primary hover:underline"
+            >
+              {c.email}
+            </a>
+            <br />
+            <span className="text-xs">{c.hours}</span>
+          </p>
+        </address>
       </div>
+
       <div className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-5 text-xs text-muted sm:px-8 md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} Acorns Nest. {FOOTER.legal}
+            © {new Date().getFullYear()} {c.name} {FOOTER.legal}
           </p>
           <nav className="flex flex-wrap gap-x-5 gap-y-2 font-medium">
             {LEGAL_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="transition hover:text-primary">
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-primary"
+              >
                 {link.label}
               </Link>
             ))}

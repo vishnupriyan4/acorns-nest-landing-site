@@ -40,11 +40,12 @@ export const APP_STORES = {
 } as const;
 
 export const HERO = {
-  eyebrow: "Built for the busiest room in the building",
-  headlineBefore: "See every classroom",
+  eyebrow: "Built in Halifax for licensed childcare centres",
+  headlineBefore: "The daycare app that shows every classroom",
   headlineAfter: " while the day is in full swing.",
+  tagline: "Daycare management software for licensed childcare centres in Canada.",
   subhead:
-    "Directors get the whole centre on one screen. Teachers log check-in, naps, and lunch from the room, one save at a time. Parents see today's menu and outing news as it happens, then the full care log the moment you publish it.",
+    "Directors get the whole centre on one screen. Teachers log attendance, naps, meals and infant milk from the room. Parents see check-ins, outings and today's menu right away, then the full daily care log the moment you publish it.",
   primaryCta: "Book a walkthrough",
   secondaryCta: "Take a look around",
 } as const;
@@ -104,7 +105,7 @@ export const STORY_SECTIONS = [
     ],
     screenshot: {
       stem: "staff-home",
-      hint: "staff-home.gif",
+      hint: "staff-home.mp4",
       kind: "mobile" as const,
       capture: "Staff → Classroom home, Outing Mode on",
     },
@@ -248,7 +249,7 @@ export const STORY_SECTIONS = [
     ],
     screenshot: {
       stem: "parent-history",
-      hint: "parent-history.png",
+      hint: "parent-history.mp4",
       kind: "mobile" as const,
       capture: "Parent → History, 7 Days tab",
     },
@@ -404,9 +405,64 @@ export const CTA = {
 
 export const FOOTER = {
   blurb:
-    "Childcare software for directors, teachers, kitchen teams, and families. One day's record, shared with everyone who needs it.",
-  legal: "Built for centres that want calmer days and clearer records.",
+    "Daycare management software for licensed childcare centres across Canada. One day's record, shared with everyone who needs it.",
+  legal: "Built in Halifax, Nova Scotia for centres that want calmer days and clearer records.",
+  company: {
+    name: "Acorns Nest Inc.",
+    streetAddress: "5651 Ogilvie Street, Unit 411",
+    locality: "Halifax",
+    region: "NS",
+    postalCode: "B3H 1B9",
+    country: "Canada",
+    countryCode: "CA",
+    email: "support@acornsnest.com",
+    hours: "Monday to Friday, 9am–5pm Atlantic Time",
+    founders: ["Vishnu Priyan Mahendran", "Vignesh Moorthy"],
+  },
 } as const;
+
+/**
+ * Homepage FAQ. Each answer starts with the subject ("Acorns Nest…")
+ * and ends with a complete fact — this is how LLMs quote.
+ * Mirrored into FAQPage JSON-LD for Google/AI retrieval.
+ */
+export const HOMEPAGE_FAQ = [
+  {
+    question: "What is Acorns Nest?",
+    answer:
+      "Acorns Nest is daycare management software for licensed childcare centres in Canada, built by Acorns Nest Inc. in Halifax, Nova Scotia. Directors run the centre from a web dashboard; teachers, kitchen staff and parents use the iOS and Android app.",
+  },
+  {
+    question: "What does Acorns Nest do?",
+    answer:
+      "Teachers log check-in and check-out, naps, meals and infant milk from the classroom. Directors manage classrooms, staff timesheets, weekly menus, messages and attendance reports by centre, classroom or child. Parents see check-ins, outings, menus and announcements as they happen, then the full daily care log when the centre publishes the day.",
+  },
+  {
+    question: "Who is Acorns Nest for?",
+    answer:
+      "Licensed childcare centres in Canada: directors, lead and assistant educators, substitutes, kitchen staff, and the parents and guardians of enrolled children.",
+  },
+  {
+    question: "How do parents and staff get access?",
+    answer:
+      "There is no public sign-up. The centre invites each parent or staff member by email with a code. They accept the invite at acornsnest.com/accept-invite, install the app, and sign in.",
+  },
+  {
+    question: "Does Acorns Nest send updates to parents in real time?",
+    answer:
+      "Check-ins, outings and announcements go out immediately. Naps, meals and the full daily care log stay with staff until the centre publishes the day, so families read a finished record.",
+  },
+  {
+    question: "How does Acorns Nest handle children's privacy?",
+    answer:
+      "Children do not have accounts. Acorns Nest does not sell personal information and does not use it for advertising. Data is processed on the centre's instructions. Our Privacy Policy sets out the detail.",
+  },
+  {
+    question: "Where is Acorns Nest built?",
+    answer:
+      "Acorns Nest is built in Halifax, Nova Scotia by Acorns Nest Inc. The product is designed for licensed daycare centres across Canada.",
+  },
+] as const;
 
 export const SUPPORT_TOPICS = [
   "Signing in or invitations",

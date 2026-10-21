@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   title: "Accept invite",
   description,
   alternates: { canonical: "/accept-invite" },
+  // Functional page, not a landing page — keep it out of search results.
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
   openGraph: {
     title: "Accept invite | Acorns Nest",
     description,

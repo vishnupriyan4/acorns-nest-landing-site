@@ -86,7 +86,10 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             {HERO.headlineBefore}
             <span className="hero-gradient-text">{HERO.headlineAfter}</span>
           </h1>
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted sm:mt-5 sm:text-lg sm:leading-7">
+          <p className="mx-auto mt-4 max-w-2xl text-base font-semibold text-ink sm:mt-5 sm:text-lg">
+            {HERO.tagline}
+          </p>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted sm:text-base sm:leading-7">
             {HERO.subhead}
           </p>
           <div className="mt-5 flex flex-col items-center justify-center gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
@@ -140,9 +143,10 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             <BrowserFrame tilt>
               <ProductScreenshot
                 src={classroomsSrc}
-                alt="Director Classroom Management"
+                alt="Acorns Nest director dashboard — classroom management with live attendance and Outing Mode"
                 hint={HERO_SHOTS.classrooms.hint}
                 capture={HERO_SHOTS.classrooms.capture}
+                priority
               />
             </BrowserFrame>
           </div>
@@ -151,7 +155,7 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             <PhoneFrame className="w-[210px] max-w-none shadow-glow lg:w-[230px]" tilt={false}>
               <ProductScreenshot
                 src={parentHomeSrc}
-                alt="Parent home"
+                alt="Acorns Nest parent mobile home — today's check-in, menu and announcements"
                 hint={HERO_SHOTS.parentHome.hint}
                 capture={HERO_SHOTS.parentHome.capture}
               />

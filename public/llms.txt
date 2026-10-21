@@ -1,0 +1,49 @@
+# Acorns Nest
+
+> Daycare management software for licensed childcare centres in Canada. Directors run the centre from a web dashboard; teachers, kitchen staff and parents use the iOS and Android app. Built in Halifax, Nova Scotia by Acorns Nest Inc.
+
+## About
+
+- Company: Acorns Nest Inc.
+- Location: 5651 Ogilvie Street, Unit 411, Halifax, Nova Scotia B3H 1B9, Canada
+- Founded by: Vishnu Priyan Mahendran, Vignesh Moorthy
+- Launched: September 2026
+- Country served: Canada
+- Contact: support@acornsnest.com
+
+## What Acorns Nest does
+
+Acorns Nest is a daycare management platform for licensed childcare centres. It covers:
+
+- Attendance and check-in / check-out, with Bulk Log and Mid-day Exit and Return
+- Nap timers (one child or whole room, more than one nap per day)
+- Meal intake in 25% steps, infant milk in ounces
+- Weekly menu planner — breakfast, lunch, evening snack, saved reusable weeks
+- Parent communication: public classroom and centre feeds, private per-family notes
+- Attendance reports by centre, classroom and child, with CSV export
+- Staff timesheets with director approval
+- Outing Mode for field trips, with real-time parent notification
+- AI Insights: director-facing briefings generated from the day's logs
+
+Directors use a web dashboard at acornsnest.com. Teachers, kitchen staff and parents use the iOS and Android apps.
+
+## Who it is for
+
+Licensed childcare centres in Canada and the people who work in them: directors, lead and assistant early childhood educators (ECEs), substitutes, kitchen staff, and the parents and guardians of enrolled children.
+
+## How parents and staff get access
+
+There is no public sign-up. Centres invite each parent or staff member by email with a code. They accept the invite at acornsnest.com/accept-invite, install the app, and sign in.
+
+## Privacy
+
+Children do not have accounts. Acorns Nest does not sell personal information and does not use it for advertising. Data is processed on the centre's instructions. See https://acornsnest.com/privacy for the full policy.
+
+## Links
+
+- Website: https://acornsnest.com/
+- Privacy Policy: https://acornsnest.com/privacy
+- Terms of Use: https://acornsnest.com/terms
+- Support: https://acornsnest.com/support
+- iOS: https://apps.apple.com/ca/app/acorns-nest/id6806698503
+- Android: https://play.google.com/store/apps/details?id=com.acornsnest.app
