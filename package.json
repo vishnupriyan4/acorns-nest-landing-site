@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "convert-media": "bash scripts/convert-media.sh"
   },
   "dependencies": {
     "lucide-react": "^1.28.0",

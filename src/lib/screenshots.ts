@@ -3,7 +3,7 @@ import path from "node:path";
 
 import { SCREENSHOT_STEMS } from "@/lib/content";
 
-const IMAGE = /\.(png|jpe?g|webp|gif)$/i;
+const IMAGE = /\.(png|jpe?g|webp|gif|mp4|webm)$/i;
 
 function fileStem(name: string): string {
   return name.replace(IMAGE, "").toLowerCase();
