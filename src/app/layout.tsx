@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 
+import { HashScroll } from "@/components/hash-scroll";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Acorns Nest — daycare management software built in Halifax, Nova Scotia",
+        alt: "Acorns Nest: daycare management software built in Halifax, Nova Scotia",
       },
     ],
   },
@@ -118,6 +119,7 @@ export default function RootLayout({
       className={`${inter.variable} ${montserrat.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-surface font-sans text-foreground">
+        <HashScroll />
         <SiteHeader />
         {children}
         <SiteFooter />

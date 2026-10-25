@@ -16,7 +16,7 @@ export function CtaSection() {
   const [state, action, pending] = useActionState(submitWalkthrough, null);
 
   return (
-    <section id="demo" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="walkthrough" className="scroll-mt-28 py-20 sm:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
@@ -42,7 +42,7 @@ export function CtaSection() {
                   {CTA.successTitle}
                 </p>
                 <p className="mt-2 max-w-sm text-sm leading-6 text-muted">
-                  Thanks — we&apos;ll reply to the email you left on the form.
+                  Thanks. We&apos;ll reply to the email you left on the form.
                 </p>
               </div>
             ) : (

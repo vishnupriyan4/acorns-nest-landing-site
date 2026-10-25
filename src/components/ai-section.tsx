@@ -29,6 +29,9 @@ export function AiSection() {
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
             {AI_SECTION.body}
           </p>
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
+            {AI_SECTION.note}
+          </p>
         </Reveal>
 
         <div className="relative mt-10 grid gap-4 md:grid-cols-3">

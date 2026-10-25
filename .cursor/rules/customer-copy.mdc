@@ -1,0 +1,29 @@
+---
+description: Voice and anti-patterns for customer-facing copy on the landing site
+globs: acorns-nest-landing-site/src/lib/content.ts,acorns-nest-landing-site/src/app/**/*.tsx,acorns-nest-landing-site/src/components/**/*.tsx
+alwaysApply: false
+---
+
+# Customer-facing copy (Acorns Nest landing site)
+
+Write like the existing homepage: directors and owners reading on a busy day. Match `HERO`, `CTA`, and `STORY_SECTIONS` in `src/lib/content.ts`.
+
+## Do
+
+- Short sentences. Plain words. Contractions when the rest of the site uses them.
+- Name real product bits (Bulk Log, Menu Planner, walkthrough) when relevant.
+- Canadian spelling: centre, licence (as licensed), behaviour only if already used elsewhere.
+- Say what is true about pilot scope (Atlantic Canada) without sounding like a press release.
+
+## Do not (AI / marketing watermarks)
+
+- Em dashes (—) in user-visible strings. Use a period or comma instead.
+- Phrases like: pilot terms, onboarding, tailored/shaped to, where it makes sense, leverage, robust, seamless, game-changer, delighted, excited to announce, centre by centre (unless the user asks for it).
+- Long chains: "rooms, staff, and parent communication — and pilot centres…"
+- Generic quote CTAs: "Contact us for a quote", "Go to contact form", "put together pilot pricing".
+- Support lines that read like a policy footer: "Billing questions go to… Monday to Friday, Atlantic time" unless the user wants exact hours in that tone.
+
+## Checks before shipping copy
+
+- Read it aloud once. If it sounds like a SaaS blog post, rewrite shorter.
+- No em dashes in `content.ts`, page metadata descriptions, or visible JSX text.

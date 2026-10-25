@@ -28,8 +28,8 @@ export default function HomePage() {
       <Roles />
       <HowItWorks />
       <AiSection />
-      <FaqSection />
       <CtaSection />
+      <FaqSection />
     </main>
   );
 }

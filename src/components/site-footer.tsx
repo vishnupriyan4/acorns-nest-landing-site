@@ -8,12 +8,15 @@ const FOOTER_LINKS = [
   { href: "/#product", label: "Product" },
   { href: "/#roles", label: "Roles" },
   { href: "/#get-the-app", label: "Get the app" },
-  { href: "/#ai", label: "Insights" },
+  { href: "/#ai", label: "AI Insights" },
   { href: "/#faq", label: "FAQ" },
-  { href: "/#demo", label: "Walkthrough" },
+  { href: "/#walkthrough", label: "Walkthrough" },
 ] as const;
 
 const LEGAL_LINKS = [
+  { href: "/about", label: "About" },
+  { href: "/nova-scotia", label: "Nova Scotia" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/support", label: "Support" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Use" },
@@ -42,6 +45,7 @@ export function SiteFooter() {
               <Link
                 key={link.href}
                 href={link.href}
+                scroll={link.href.startsWith("/#") ? false : undefined}
                 className="transition hover:text-primary"
               >
                 {link.label}

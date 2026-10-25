@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 // Served from /opengraph-image. Also used as the Twitter card image.
 export const alt =
-  "Acorns Nest — daycare management software built in Halifax, Nova Scotia";
+  "Acorns Nest: daycare management software built in Halifax, Nova Scotia";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -74,7 +74,7 @@ export default function OpengraphImage() {
             }}
           >
             Attendance, naps, meals, parent messages, weekly menus and staff
-            timesheets — in one daycare app. Built in Halifax, Nova Scotia.
+            timesheets in one daycare app. Built in Halifax, Nova Scotia.
           </div>
         </div>
 

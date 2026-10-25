@@ -94,7 +94,7 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
           </p>
           <div className="mt-5 flex flex-col items-center justify-center gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
             <a
-              href="#demo"
+              href="#walkthrough"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-md transition hover:bg-primary-hover"
             >
               {HERO.primaryCta}
@@ -115,6 +115,9 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
               </a>
             </p>
             <StoreBadges className="justify-center" />
+            <a href="#ai" className="text-xs font-semibold text-primary hover:underline lg:hidden">
+              AI Insights for directors
+            </a>
           </div>
         </div>
 
@@ -126,12 +129,13 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             </span>
             Outing Mode live
           </div>
-          <div
-            className="absolute -right-1 top-24 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-primary shadow-md lg:block"
+          <a
+            href="#ai"
+            className="absolute -right-1 top-24 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-primary shadow-md hover:bg-primary-muted lg:inline-flex"
             style={{ animationDelay: "0.8s" }}
           >
             Powered by AI
-          </div>
+          </a>
           <div
             className="absolute bottom-28 left-0 z-20 hidden float-y rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground shadow-md lg:block"
             style={{ animationDelay: "1.2s" }}
@@ -143,7 +147,7 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             <BrowserFrame tilt>
               <ProductScreenshot
                 src={classroomsSrc}
-                alt="Acorns Nest director dashboard — classroom management with live attendance and Outing Mode"
+                alt="Acorns Nest director dashboard: classroom management with live attendance and Outing Mode"
                 hint={HERO_SHOTS.classrooms.hint}
                 capture={HERO_SHOTS.classrooms.capture}
                 priority
@@ -155,7 +159,7 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             <PhoneFrame className="w-[210px] max-w-none shadow-glow lg:w-[230px]" tilt={false}>
               <ProductScreenshot
                 src={parentHomeSrc}
-                alt="Acorns Nest parent mobile home — today's check-in, menu and announcements"
+                alt="Acorns Nest parent mobile home: today's check-in, menu and announcements"
                 hint={HERO_SHOTS.parentHome.hint}
                 capture={HERO_SHOTS.parentHome.capture}
               />

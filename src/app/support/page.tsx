@@ -138,7 +138,8 @@ export default function SupportPage() {
             </Link>
             . Centres looking for a product tour can{" "}
             <Link
-              href="/#demo"
+              href="/#walkthrough"
+              scroll={false}
               className="font-medium text-primary underline-offset-4 hover:underline"
             >
               book a walkthrough

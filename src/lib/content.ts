@@ -2,7 +2,7 @@
 export const NAV_LINKS = [
   { href: "/#product", label: "Product" },
   { href: "/#roles", label: "Who it's for" },
-  { href: "/#ai", label: "Insights" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/#get-the-app", label: "Get the app" },
 ] as const;
 
@@ -372,7 +372,9 @@ export const STEPS = [
 
 export const AI_SECTION = {
   title: "The week, already read for you",
-  body: "Directors open AI Insights and get a plain-English briefing from the logs the rooms already keep: where the centre is steady, and where a quick conversation would help. Every call is still yours.",
+  body: "Directors open AI Insights and get a plain-English briefing from the logs the rooms already keep: where the centre is steady, and where a quick conversation would help.",
+  note: "AI writes the first draft. You still decide the follow-up. Child records are not used to train models. You can run the centre without opening AI Insights.",
+  href: "/#ai",
 } as const;
 
 export const AI_SIGNALS = [
@@ -389,6 +391,83 @@ export const AI_SIGNALS = [
     body: "It runs on the logs your team already saves, and opens the same classrooms, messages, and reports you use every day.",
   },
 ] as const;
+
+export const PRICING = {
+  kicker: "Pricing",
+  title: "Quotes for the pilot.",
+  intro:
+    "We're working with licensed childcare centres in Atlantic Canada. What you pay depends on your rooms and how many staff and parents use the app.",
+  detail:
+    "Pilot centres can ask for custom work when something in your building does not match the default flow. Book a walkthrough, name your centre, and we'll send pricing by email. If you're outside Atlantic Canada, you can still write in. We'll tell you straight if we're not ready in your province yet.",
+  /** Cross-page links use #walkthrough (the form). Same-page hero links may use #demo. */
+  walkthroughHref: "/#walkthrough",
+  walkthroughCta: "Book a walkthrough",
+  existingCentresBefore: "Billing on an account you already have? Email ",
+  existingCentresAfter: ". Weekdays, from Halifax.",
+} as const;
+
+export const ABOUT = {
+  kicker: "About",
+  title: "Built in Halifax for the room, not the back office PC.",
+  intro:
+    "Acorns Nest Inc. makes daycare management software for licensed childcare centres. Teachers log the day from the floor. Directors run the centre from a web dashboard. Parents read the same record when you publish it.",
+  story: [
+    "We started Acorns Nest because the daily record in most centres still splits across paper, text threads, and an office computer nobody has time for at nap time.",
+    "The product went live in 2026 with iOS, Android, and a director dashboard. We are based in Halifax and working with pilot centres in Atlantic Canada first.",
+  ],
+  loadTitle: "Less rebuild, same logs",
+  load: [
+    "The day still has to be written once. Staff log check-in, naps, and meals in the room. Directors should not rebuild that into a Monday recap.",
+    "AI Insights reads those logs and drafts a short briefing, plus the follow-ups worth a conversation. You decide what to do with it. Child records are not used to train models. You can run the centre without opening it.",
+  ],
+  aiHref: "/#ai",
+  aiCta: "See AI Insights",
+  foundersTitle: "Who builds it",
+  founders: [
+    {
+      name: "Vishnu Priyan Mahendran",
+      role: "Co-founder",
+      bio: "Product and engineering. Works with directors on pilot centres and day-to-day product direction.",
+    },
+    {
+      name: "Vignesh Moorthy",
+      role: "Co-founder",
+      bio: "Product and engineering. Helps centres get from first walkthrough to staff and parents on the app.",
+    },
+  ],
+  contactTitle: "Reach us",
+  walkthroughHref: "/#walkthrough",
+  walkthroughCta: "Book a walkthrough",
+} as const;
+
+export const NOVA_SCOTIA = {
+  kicker: "Nova Scotia",
+  title: "Daycare software for licensed centres in Nova Scotia.",
+  intro:
+    "Acorns Nest is built in Halifax for the same daily work NS centres already do: check-in, naps, meals, parent messages, menus, and attendance records staff can export when someone asks.",
+  sections: [
+    {
+      title: "For directors and owners",
+      body: "See every classroom on one screen. Run Menu Planner, Messages, staff timesheets, and attendance reports by centre, room, or child. AI Insights reads the logs your team already keeps and surfaces follow-ups worth a morning conversation.",
+    },
+    {
+      title: "For staff and families",
+      body: "Teachers use Bulk Log in the room. Parents get check-ins, outings, and announcements as they happen. Naps, meals, and the full care log go out when you publish the day, on your schedule.",
+    },
+    {
+      title: "Pilot in Atlantic Canada",
+      body: "We are signing pilot centres across Atlantic Canada, including Nova Scotia. Pricing is by quote. Pilot centres can ask for custom work when their workflow needs something specific.",
+    },
+    {
+      title: "Provincial fees and records",
+      body: "Acorns Nest is not a subsidy billing system. It gives you accurate attendance and daily care records your team already maintains, so you spend less time reconstructing the week when paperwork is due.",
+    },
+  ],
+  walkthroughHref: "/#walkthrough",
+  walkthroughCta: "Book a walkthrough",
+  pricingHref: "/pricing",
+  pricingCta: "See pricing",
+} as const;
 
 export const CTA = {
   kicker: "See it with your kind of day",
@@ -461,6 +540,11 @@ export const HOMEPAGE_FAQ = [
     question: "Where is Acorns Nest built?",
     answer:
       "Acorns Nest is built in Halifax, Nova Scotia by Acorns Nest Inc. The product is designed for licensed daycare centres across Canada.",
+  },
+  {
+    question: "How much does Acorns Nest cost?",
+    answer:
+      "There is no flat rate on the site. We quote after a walkthrough, with custom work available for pilot centres in Atlantic Canada. Start at acornsnest.com/#walkthrough or read acornsnest.com/pricing.",
   },
 ] as const;
 

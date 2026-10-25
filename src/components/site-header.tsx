@@ -64,7 +64,8 @@ export function SiteHeader() {
 
         <div className="hidden md:block">
           <Link
-            href="/#demo"
+            href="/#walkthrough"
+            scroll={false}
             className="inline-flex rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-hover"
           >
             {HERO.primaryCta}
@@ -108,7 +109,8 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              href="/#demo"
+              href="/#walkthrough"
+              scroll={false}
               onClick={() => setOpen(false)}
               className="mt-2 rounded-lg bg-primary px-3 py-3 text-center text-sm font-semibold text-primary-foreground"
             >

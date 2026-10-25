@@ -42,6 +42,9 @@ Children do not have accounts. Acorns Nest does not sell personal information an
 ## Links
 
 - Website: https://acornsnest.com/
+- About: https://acornsnest.com/about
+- Nova Scotia: https://acornsnest.com/nova-scotia
+- Pricing: https://acornsnest.com/pricing
 - Privacy Policy: https://acornsnest.com/privacy
 - Terms of Use: https://acornsnest.com/terms
 - Support: https://acornsnest.com/support

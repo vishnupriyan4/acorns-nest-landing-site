@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-padding-top: 5.5rem;
+}
+
 /*
  * Acorns Nest Landing — design tokens
  * Aligned with admin UI + mobile app (cream canvas, purple brand, Inter + Montserrat).
