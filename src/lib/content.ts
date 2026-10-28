@@ -567,7 +567,7 @@ export const SUPPORT = {
     hours: "Monday to Friday, 9am–5pm Atlantic Time",
     reply: "We reply within one business day.",
     address: [
-      "Acorns Nest, Inc.",
+      "Acorns Nest Inc.",
       "5651 Ogilvie Street, Unit 411",
       "Halifax, Nova Scotia B3H 1B9",
       "Canada",

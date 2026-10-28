@@ -5,7 +5,7 @@ effectiveDate: September 7, 2026
 lastUpdated: September 7, 2026
 ---
 
-These Terms of Use form an agreement between you and Acorns Nest, Inc. ("Acorns Nest", "we", "us", "our") governing your use of the Acorns Nest mobile app, the director dashboard, and this website (together, the "Service").
+These Terms of Use form an agreement between you and Acorns Nest Inc. ("Acorns Nest", "we", "us", "our") governing your use of the Acorns Nest mobile app, the director dashboard, and this website (together, the "Service").
 
 By signing in to or otherwise using the Service, you accept these terms. If you do not accept them, do not use the Service. Our [Privacy Policy](/privacy) forms part of these terms.
 
@@ -110,7 +110,7 @@ If any provision of these terms is held unenforceable, the remaining provisions 
 
 ## 16. Contact
 
-Acorns Nest, Inc.\
+Acorns Nest Inc.\
 5651 Ogilvie Street, Unit 411\
 Halifax, Nova Scotia B3H 1B9\
 Canada\

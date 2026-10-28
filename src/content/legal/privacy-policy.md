@@ -5,7 +5,7 @@ effectiveDate: September 7, 2026
 lastUpdated: September 7, 2026
 ---
 
-Acorns Nest, Inc. ("Acorns Nest", "we", "us", "our") provides recordkeeping and communication software licensed to childcare centres. This Privacy Policy explains how we handle personal information in the Acorns Nest mobile app, the director dashboard, and this website (together, the "Service").
+Acorns Nest Inc. ("Acorns Nest", "we", "us", "our") provides recordkeeping and communication software licensed to childcare centres. This Privacy Policy explains how we handle personal information in the Acorns Nest mobile app, the director dashboard, and this website (together, the "Service").
 
 This policy describes our practices. Consent for a child's information to be recorded in the Service is obtained by your childcare centre as described in section 10.
 
@@ -199,7 +199,7 @@ We may update this policy from time to time. If a change materially affects how 
 For questions about this policy, to exercise a right described above, or to raise a concern, contact our Privacy Officer:
 
 Privacy Officer\
-Acorns Nest, Inc.\
+Acorns Nest Inc.\
 5651 Ogilvie Street, Unit 411\
 Halifax, Nova Scotia B3H 1B9\
 Canada\
