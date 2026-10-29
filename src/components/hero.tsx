@@ -92,6 +92,19 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted sm:text-base sm:leading-7">
             {HERO.subhead}
           </p>
+          <p className="mx-auto mt-4 max-w-2xl text-sm font-semibold text-ink">
+            {HERO.offers.map((offer, index) => (
+              <span key={offer.label}>
+                {index > 0 ? " · " : null}
+                <a
+                  href={offer.href}
+                  className="underline decoration-primary/40 underline-offset-4 hover:text-primary"
+                >
+                  {offer.label}
+                </a>
+              </span>
+            ))}
+          </p>
           <div className="mt-5 flex flex-col items-center justify-center gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
             <a
               href="#walkthrough"

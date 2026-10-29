@@ -21,7 +21,6 @@ export default function HomePage() {
         classroomsSrc={shots.classrooms}
         parentHomeSrc={shots["parent-home"]}
       />
-      <AppStores />
       <CapabilityMarquee />
       <StorySections shots={shots} />
       <InteractiveDemo />
@@ -30,6 +29,7 @@ export default function HomePage() {
       <AiSection />
       <CtaSection />
       <FaqSection />
+      <AppStores />
     </main>
   );
 }

@@ -41,11 +41,16 @@ export const APP_STORES = {
 
 export const HERO = {
   eyebrow: "Built in Halifax for licensed childcare centres",
-  headlineBefore: "The daycare app that shows every classroom",
-  headlineAfter: " while the day is in full swing.",
+  headlineBefore: "The day,",
+  headlineAfter: " written once.",
   tagline: "Daycare management software for licensed childcare centres in Canada.",
   subhead:
-    "Directors get the whole centre on one screen. Teachers log attendance, naps, meals and infant milk from the room. Parents see check-ins, outings and today's menu right away, then the full daily care log the moment you publish it.",
+    "Attendance, meals, milk, diapers, and nap timers go in from the room. Parents see check-ins and outings when you send them, and the rest of the day when you publish it. You stop writing that day a second time. The compliance-ready report is one tap.",
+  offers: [
+    { label: "Join our pilot now", href: "/pricing" },
+    // { label: "Custom work for pilot centres", href: "/pricing" },
+    { label: "Home daycares are free", href: "#walkthrough" },
+  ],
   primaryCta: "Book a walkthrough",
   secondaryCta: "Take a look around",
 } as const;
@@ -115,11 +120,11 @@ export const STORY_SECTIONS = [
     topic: "Bulk Log",
     kicker: "One save, whole room",
     title: "Check the room in before the last coat is hung.",
-    body: "Bulk Log covers Check In, Meals, and Naps. Hit Select All when everyone floods in, then save on the current time or pick your own. Appointments and early pickups get Mid-day Exit and Return. Nap timers run for one sleeper or the whole room, and yes, more than one nap a day.",
+    body: "Bulk Log covers check-in, meals, milk, diapers, and naps. Hit Select All when everyone floods in, then save on the current time or pick your own. Appointments and early pickups get Mid-day Exit and Return. Nap timers run for one sleeper or the whole room, and yes, more than one nap a day.",
     bullets: [
       "Check In, Check Out, Mid-day Exit, and Return, notes included",
-      "Meal intake in 25% steps, infant milk in ounces",
-      "Nap timers for one child or every mat in the room",
+      "Meals, infant milk, and diaper checks in the same save",
+      "Nap timers for one child or every mat in the room, or a time you set",
     ],
     screenshot: {
       stem: "staff-log",
@@ -129,75 +134,40 @@ export const STORY_SECTIONS = [
     },
   },
   {
-    id: "parent-communicate",
-    topic: "Communicate",
-    kicker: "What families actually read",
-    title: "Notes that land where parents are already looking.",
-    body: "Communicate is a clean card feed: room and centre notes out in the open, a quiet word about one child kept private. Teachers and directors write the cards, so there's no newsletter to rebuild every Friday afternoon.",
+    id: "parent-history",
+    topic: "Families",
+    kicker: "On your clock",
+    title: "You decide when the day reaches them.",
+    body: "Parents do not check children in or out. You choose when meals, milk, diapers, and naps open for families. Outings and messages can go the moment you send them. A planned absence comes from the family. Today's absence is marked in the room.",
     bullets: [
-      "Public and private tabs, per classroom or centre-wide",
-      "A date filter for the parent asking about last Tuesday",
-      "Notes from the director desk land in the same feed",
+      "The care log opens at the time you choose",
+      "Outings and announcements go out as soon as you send them",
+      "History on the same child, from the record staff already saved",
     ],
     screenshot: {
-      stem: "parent-communicate",
-      hint: "parent-communicate.png",
+      stem: "parent-history",
+      hint: "parent-history.mp4",
       kind: "mobile" as const,
-      capture: "Parent → Communicate, public feed",
+      capture: "Parent → History, 7 Days tab",
     },
   },
   {
-    id: "menu-planner",
-    topic: "Menu Planner",
-    kicker: "The week on a grid",
-    title: "Plan Monday's lunch once. Monday takes care of itself.",
-    body: "Fill Breakfast, Lunch, and Evening Snack from Monday to Friday. Save up to four reusable weeks from the PDF you already make, then put Week 1 on this week in one click. Typed changes stay on that week and do not rewrite the saved menus. Parents see today's meals on home.",
+    id: "director-desk",
+    topic: "Director's desk",
+    kicker: "The office work, once",
+    title: "The binder closes when the day does.",
+    body: "Upload the menu PDF you already make and those weeks repeat. You can still change a single day. The week's notes and photos become a newsletter you review, then share with families, including as an announcement. Attendance for the centre, a room, or one child exports in one click when the compliance file is due.",
     bullets: [
-      "Week strip for this week and the next three",
-      "Saved menus: upload a PDF per week, or one PDF for every week",
-      "Today's menu on parent home. Nothing taped to the door.",
-    ],
-    screenshot: {
-      stem: "menu-planner",
-      hint: "menu-planner.png",
-      kind: "desktop" as const,
-      capture: "Director → Menu Planner, week grid filled",
-    },
-  },
-  {
-    id: "reports",
-    topic: "Attendance reports",
-    kicker: "How directors already think",
-    title: "Centre, classroom, or child. Pick a lens and export.",
-    body: "Attendance groups the way you already talk about it in a staff meeting: the whole centre, room by room, or one child. Filter the dates, spot the late arrivals and early pickups, then download the CSV for whoever's asking. Same check-ins your teachers saved in Bulk Log.",
-    bullets: [
-      "Centre-wide, classroom, and child views",
-      "Any date range up to a year, filtered by room",
-      "CSV download for the view you're looking at",
+      "Menu weeks repeat from the PDF you already use",
+      "Newsletter drafted from the room, ready for you to review and share",
+      "Compliance-ready attendance report in one click",
+      "Billing on only if you want it. Cards run through Stripe, a PCI Level 1 provider. Or invoice and record cash, e-transfer, or cheque",
     ],
     screenshot: {
       stem: "reports",
       hint: "reports.png",
       kind: "desktop" as const,
       capture: "Director → Reports → Student Attendance",
-    },
-  },
-  {
-    id: "staff-management",
-    topic: "Staff & timesheets",
-    kicker: "The people in the rooms",
-    title: "Invite the team. Approve the hours. Get back to the floor.",
-    body: "Your roster in one place: teachers, substitutes, and kitchen staff, assigned to rooms, with On duty right on the card. Pending timesheets wait for your approve or reject, and the history stays put for payroll week.",
-    bullets: [
-      "Invite by role: lead, assistant, cook, or substitute",
-      "Room assignments with On duty on the card",
-      "Timesheet approval before payroll, not after",
-    ],
-    screenshot: {
-      stem: "staff-management",
-      hint: "staff-management.png",
-      kind: "desktop" as const,
-      capture: "Director → Staff Management, roster",
     },
   },
   {
@@ -216,60 +186,6 @@ export const STORY_SECTIONS = [
       hint: "ai-insights.png",
       kind: "desktop" as const,
       capture: "Director → AI Insights",
-    },
-  },
-  {
-    id: "messages",
-    topic: "Messages",
-    kicker: "From the director desk",
-    title: "The whole centre, one room, or one family.",
-    body: "Send and Inbox, that's the whole idea. Write to every parent, a single classroom, or one child's family. Tag it so families know at a glance whether it's picture day or a nudge about spare clothes. Inbox keeps everything the centre has sent, teacher notes included.",
-    bullets: [
-      "Audience: whole daycare, one classroom, or one family",
-      "A category on every card, so nobody has to guess",
-      "Inbox filters by date, scope, classroom, and child",
-    ],
-    screenshot: {
-      stem: "messages",
-      hint: "messages.png",
-      kind: "desktop" as const,
-      capture: "Director → Messages → Send",
-    },
-  },
-  {
-    id: "parent-history",
-    topic: "History",
-    kicker: "After pickup",
-    title: "“How did she nap?” Answered before anyone asks.",
-    body: "When you publish the day, families can look back at the same naps, meals, and attendance your teachers logged. One day, seven days, or thirty. It's the room's record, released on your schedule.",
-    bullets: [
-      "1 Day, 7 Days, or 30 Days on the same child",
-      "Meal intake straight from the staff log",
-      "Nap totals and the attendance trend",
-    ],
-    screenshot: {
-      stem: "parent-history",
-      hint: "parent-history.mp4",
-      kind: "mobile" as const,
-      capture: "Parent → History, 7 Days tab",
-    },
-  },
-  {
-    id: "child-profile",
-    topic: "Child profile",
-    kicker: "On file, on the floor",
-    title: "Allergies, pickups, and the day so far. One card.",
-    body: "Open a child from your room list and it's all there: attendance, naps, meals, allergies, dietary notes, emergency contacts, authorized pickups, and any special instructions. Parents see the same profile, so the details on file are the details everyone's working from.",
-    bullets: [
-      "Allergies and dietary needs right at the top",
-      "Emergency contacts and authorized pickups, no filing cabinet",
-      "Today's activity, built from the logs your team saved",
-    ],
-    screenshot: {
-      stem: "child-profile",
-      hint: "child-profile.png",
-      kind: "mobile" as const,
-      capture: "Staff → Classroom home → child row",
     },
   },
 ] as const;
@@ -301,9 +217,9 @@ export const ROLES = [
     summary: "The whole centre, without pacing the hallway.",
     points: [
       "Classroom Management: live tallies, Outing Mode, new learning spaces",
-      "Invite staff and parents. Assign your leads and assistants.",
-      "Attendance at centre, classroom, and child level",
-      "Timesheets, Menu Planner, Messages, and AI Insights",
+      "Invite staff and parents. Approve substitute hours before payroll.",
+      "Menu from the PDF you already make. Newsletter you review and share.",
+      "Compliance-ready attendance export. Billing only if you want it. AI Insights",
     ],
   },
   {
@@ -313,33 +229,32 @@ export const ROLES = [
     summary: "Log the day from the room, not the office PC.",
     points: [
       "Classroom home with the present tally and Outing Mode",
-      "Bulk Log for attendance, nap timers, and meal intake",
-      "Communicate: a classroom note or a private word to one family",
-      "Child profiles with allergies, contacts, and Quick Log",
+      "Bulk Log for attendance, nap timers, meals, milk, and diapers",
+      "A classroom note or a private word to one family",
+      "Notes and photos the family never sees, until you use them",
     ],
   },
   {
     id: "parent",
     title: "Parents",
     kicker: "Family mobile",
-    summary: "Know how the day went before the car door shuts.",
+    summary: "The day, when you release it. Not a sign-in job.",
     points: [
-      "Home: check-in, outings, absences, and today's menu",
-      "Communicate feed for classroom, centre, and private notes",
-      "History across 1, 7, and 30 days",
-      "The profile the centre keeps on file",
+      "Home: where their child is, outings, absences, and today's menu",
+      "Room, centre, and private notes. They do not check anyone in",
+      "A planned absence they can send ahead",
+      "History from the record the room already logged",
     ],
   },
   {
     id: "cook",
     title: "Kitchen",
     kicker: "Menus & dietary care",
-    summary: "This week's meals, where rooms and families already look.",
+    summary: "What the children ate, against the menu the director posted.",
     points: [
-      "Weekly Menu Planner: breakfast, lunch, evening snack",
-      "Saved weeks from PDF, then apply to this week — or type a one-off",
-      "Allergies and dietary restrictions on every child's profile",
-      "Teachers log intake in 25% steps. Infant milk in ounces.",
+      "The week's meals are on parent home. Nothing taped to the door.",
+      "Allergies and dietary needs on the child's card",
+      "Teachers log intake in the room. Infant milk in ounces.",
     ],
   },
 ] as const;
@@ -361,8 +276,8 @@ export const STEPS = [
     body: "Select All and check the room in, start nap timers when the mats come out, and keep allergy notes a tap from your thumb.",
   },
   {
-    title: "Publish on your clock",
-    body: "Naps, meals, and the day's care log stay in the room until you release them, at the end of the day or a time you set. Outings and announcements can go out the moment staff hit send. Directors see the live rooms all along.",
+    title: "You choose when families see it",
+    body: "Meals, milk, diapers, and naps open at the time you set. Outings and announcements can go the moment staff hit send. Directors see the rooms all along.",
   },
   {
     title: "Doors closed, day recorded",
@@ -460,7 +375,7 @@ export const NOVA_SCOTIA = {
     },
     {
       title: "Provincial fees and records",
-      body: "Acorns Nest is not a subsidy billing system. It gives you accurate attendance and daily care records your team already maintains, so you spend less time reconstructing the week when paperwork is due.",
+      body: "Acorns Nest is not a subsidy filing system. If you want tuition in the app, turn billing on. Families can pay by card through Stripe, or you invoice them and record cash, e-transfer, or cheque. Either way, attendance and the daily care log are already in one place when the compliance file is due.",
     },
   ],
   walkthroughHref: "/#walkthrough",
@@ -514,7 +429,7 @@ export const HOMEPAGE_FAQ = [
   {
     question: "What does Acorns Nest do?",
     answer:
-      "Teachers log check-in and check-out, naps, meals and infant milk from the classroom. Directors manage classrooms, staff timesheets, weekly menus, messages and attendance reports by centre, classroom or child. Parents see check-ins, outings, menus and announcements as they happen, then the full daily care log when the centre publishes the day.",
+      "Teachers log check-in, naps, meals, milk, and diapers once, in the room. Directors run menus, newsletters, messages, hours, and attendance reports from that same record. You choose when families see the care log. Outings and announcements can go as soon as you send them.",
   },
   {
     question: "Who is Acorns Nest for?",
@@ -529,7 +444,7 @@ export const HOMEPAGE_FAQ = [
   {
     question: "Does Acorns Nest send updates to parents in real time?",
     answer:
-      "Check-ins, outings and announcements go out immediately. Naps, meals and the full daily care log stay with staff until the centre publishes the day, so families read a finished record.",
+      "You decide. Meals, milk, diapers, and naps open at the time the centre sets. Outings and announcements can go out as soon as staff send them.",
   },
   {
     question: "How does Acorns Nest handle children's privacy?",
@@ -545,6 +460,11 @@ export const HOMEPAGE_FAQ = [
     question: "How much does Acorns Nest cost?",
     answer:
       "There is no flat rate on the site. We quote after a walkthrough, with custom work available for pilot centres in Atlantic Canada. Start at acornsnest.com/#walkthrough or read acornsnest.com/pricing.",
+  },
+  {
+    question: "Can families pay tuition in the app?",
+    answer:
+      "Only if you turn billing on. Card payments are processed by Stripe, a PCI Level 1 provider. If you would rather not take cards in the app, invoice families and record cash, e-transfer, or cheque yourself.",
   },
 ] as const;
 
