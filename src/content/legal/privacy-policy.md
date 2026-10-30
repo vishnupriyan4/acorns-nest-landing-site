@@ -2,7 +2,7 @@
 title: Privacy Policy
 description: How Acorns Nest collects, uses, shares, and protects personal information, including information about children in licensed childcare.
 effectiveDate: September 7, 2026
-lastUpdated: September 7, 2026
+lastUpdated: October 30, 2026
 ---
 
 Acorns Nest Inc. ("Acorns Nest", "we", "us", "our") provides recordkeeping and communication software licensed to childcare centres. This Privacy Policy explains how we handle personal information in the Acorns Nest mobile app, the director dashboard, and this website (together, the "Service").
@@ -49,6 +49,10 @@ Role classification, compensation rate, and submitted working hours.
 
 Device notification tokens, device platform and app version, and session information required to keep you signed in. For each centre, we hold the centre name, licence number, time zone, and operational settings configured by the director.
 
+### 2.8 This website
+
+If you accept analytics on this website, we record the pages you view, how you arrived, and whether the walkthrough form was submitted. We do not record your name, email address, phone number, or the other answers on that form for this purpose. If you decline, or have not yet chosen, we do not collect this information. Section 7 explains the choice and the cookies.
+
 ## 3. Information we do not collect
 
 Acorns Nest does not collect:
@@ -84,6 +88,7 @@ We use personal information to:
 - Generate attendance reporting and process staff timesheets
 - Authenticate users, secure accounts, and prevent misuse
 - Provide the features described in section 6.3
+- Understand how visitors find and use this website, only when they have agreed, as described in section 7
 - Comply with recordkeeping obligations applicable to licensed childcare
 
 We do not use children's information for marketing or profiling, and we do not use it to make automated decisions that produce legal or similarly significant effects.
@@ -103,7 +108,7 @@ We engage a small number of providers to deliver the Service. Each is bound by c
 | Provider | Function |
 | --- | --- |
 | Supabase | Cloud platform: authentication, data storage, and transactional email |
-| Google | Push notification delivery; artificial intelligence features (section 6.3) |
+| Google | Push notification delivery; artificial intelligence features (section 6.3); website analytics after a visitor accepts (section 7) |
 | Railway | Application hosting |
 | Resend | Delivery of enquiry email submitted through this website |
 
@@ -133,7 +138,17 @@ The mobile app does not use cookies or advertising identifiers. Session informat
 
 The director dashboard uses strictly necessary cookies to keep you signed in and to remember which centre you are viewing.
 
-We do not use analytics, advertising, or third-party tracking cookies on the Service or on this website.
+On this website, Google Analytics runs only after you click Accept on the cookie banner. Before you choose, and if you click Decline, we do not load Google Analytics and we do not set an analytics cookie.
+
+If you accept, we use Google Analytics to see which pages of this website are read, how you arrived (including from a link we shared), and whether the walkthrough form was submitted. A submission is counted only. Your name, email address, centre name, and phone number are not sent to Google. Those details are emailed to us, as described in section 6.2.
+
+We do not use this information for advertising, and we do not use it to track you across other companies' apps or websites. We do not send information about children, families, or centre accounts to Google Analytics. The mobile app and the director dashboard are not included.
+
+Your choice is stored in a first-party cookie for 6 months so the banner does not appear on every visit. That cookie records only whether you accepted or declined. If you accept, Google sets its own analytics cookies, which can remain on your browser for up to 2 years. The analytics data Google holds for us is kept for 2 months.
+
+You can change your choice at any time from Cookie settings in the footer. If you withdraw consent, we stop Google Analytics and delete Google's analytics cookies. This choice applies only to visitors of this website. It is separate from the consent your childcare centre obtains at enrolment.
+
+We do not use advertising cookies on the Service or on this website.
 
 ## 8. How long we keep information
 
@@ -146,6 +161,7 @@ We do not use analytics, advertising, or third-party tracking cookies on the Ser
 | Timesheets | 7 years, as employment records |
 | Notification tokens | Deleted on sign-out, when notifications are disabled, or when a device stops accepting them |
 | Website enquiries | 2 years |
+| Website analytics | The cookie that stores your choice is kept for 6 months. Google Analytics cookies may remain for up to 2 years. The analytics data held by Google is kept for 2 months. |
 
 Where provincial licensing requirements impose a longer retention period, that period applies.
 
