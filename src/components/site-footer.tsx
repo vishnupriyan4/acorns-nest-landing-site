@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { Fragment } from "react";
 
 import { BrandMark } from "@/components/brand-mark";
+import { CookieSettingsLink } from "@/components/cookie-settings-link";
 import { StoreBadges } from "@/components/store-badges";
 import { FOOTER } from "@/lib/content";
 
@@ -92,13 +94,12 @@ export function SiteFooter() {
           </p>
           <nav className="flex flex-wrap gap-x-5 gap-y-2 font-medium">
             {LEGAL_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="transition hover:text-primary"
-              >
-                {link.label}
-              </Link>
+              <Fragment key={link.href}>
+                <Link href={link.href} className="transition hover:text-primary">
+                  {link.label}
+                </Link>
+                {link.href === "/privacy" ? <CookieSettingsLink /> : null}
+              </Fragment>
             ))}
           </nav>
         </div>

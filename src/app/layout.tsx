@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Montserrat } from "next/font/google";
 
+import { CookieConsent } from "@/components/cookie-consent";
 import { HashScroll } from "@/components/hash-scroll";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { analyticsReleaseEnabled, consentBootstrapScript } from "@/lib/analytics";
 
 import "./globals.css";
 
@@ -117,12 +119,17 @@ export default function RootLayout({
     <html
       lang="en-CA"
       className={`${inter.variable} ${montserrat.variable} h-full scroll-smooth antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full bg-surface font-sans text-foreground">
+        {analyticsReleaseEnabled() ? (
+          <script dangerouslySetInnerHTML={{ __html: consentBootstrapScript() }} />
+        ) : null}
         <HashScroll />
         <SiteHeader />
         {children}
         <SiteFooter />
+        <CookieConsent />
       </body>
     </html>
   );

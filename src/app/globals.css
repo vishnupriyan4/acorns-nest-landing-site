@@ -273,6 +273,11 @@ body {
   color: transparent;
 }
 
+/* Hide the consent banner before paint when this browser already chose. */
+html[data-analytics-consent="chosen"] #cookie-consent-banner {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

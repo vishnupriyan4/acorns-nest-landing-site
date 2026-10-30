@@ -1,9 +1,10 @@
 "use client";
 
 import { CheckCircle2, Loader2 } from "lucide-react";
-import { useActionState, type ReactNode } from "react";
+import { useActionState, useEffect, type ReactNode } from "react";
 
 import { submitWalkthrough } from "@/actions/walkthrough";
+import { trackWalkthroughLead } from "@/lib/analytics";
 import { Reveal } from "@/components/ui/reveal";
 import { CTA } from "@/lib/content";
 
@@ -14,6 +15,10 @@ const fieldClass =
 
 export function CtaSection() {
   const [state, action, pending] = useActionState(submitWalkthrough, null);
+
+  useEffect(() => {
+    if (state?.ok) trackWalkthroughLead();
+  }, [state]);
 
   return (
     <section id="walkthrough" className="scroll-mt-28 py-20 sm:py-28">
