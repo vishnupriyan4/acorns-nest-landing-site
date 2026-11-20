@@ -350,11 +350,6 @@ export const ABOUT = {
   foundersTitle: "Who builds it",
   founders: [
     {
-      name: "Vishnu Priyan Mahendran",
-      role: "Co-founder and Director",
-      bio: "Product and engineering. Works with directors at our pilot centre and on day-to-day product direction.",
-    },
-    {
       name: "Vignesh Moorthy",
       role: "Co-founder and Director",
       bio: "Product and engineering. Helps centres get from first walkthrough to staff and parents on the app.",
@@ -439,7 +434,7 @@ export const FOOTER = {
     countryCode: "CA",
     email: "support@acornsnest.com",
     hours: "Monday to Friday, 9 a.m. to 5 p.m. Atlantic Time",
-    founders: ["Vishnu Priyan Mahendran", "Vignesh Moorthy"],
+    founders: ["Vignesh Moorthy"],
   },
 } as const;
 

@@ -17,7 +17,7 @@ You are setting up **third-party directory and company profiles** for **Acorns N
 | Address | 5651 Ogilvie Street, Unit 411, Halifax, Nova Scotia B3H 1B9, Canada |
 | Category | Childcare / daycare management software, B2B SaaS |
 | Founded / launched | 2026 (product live App Store + Google Play Sept 2026) |
-| Founders | Vishnu Priyan Mahendran, Vignesh Moorthy |
+| Founders | Vignesh Moorthy (co-founder). Do not list any other founder or person by name. |
 | Region served | Canada (pilot focus: Atlantic Canada) |
 | HQ | Halifax, NS |
 
@@ -63,7 +63,7 @@ Acorns Nest Inc. builds Acorns Nest in Halifax, Nova Scotia. Directors manage cl
 - Organization: **Acorns Nest Inc.**
 - Type: Private company, Software.
 - Location: Halifax, Nova Scotia, Canada.
-- Founders: Vishnu Priyan Mahendran, Vignesh Moorthy.
+- Founders: Vignesh Moorthy only. Do not add any other founder name, even if a form or another source suggests one.
 - Website and social links when available.
 - Short description: use the one-sentence definition above.
 
@@ -84,12 +84,17 @@ Acorns Nest Inc. builds Acorns Nest in Halifax, Nova Scotia. Directors manage cl
 - No em dashes, no “excited to announce,” no fake metrics.
 - Do not claim CWELCC/subsidy **filing** unless product docs say so; daily attendance and care records only.
 
+## Name removal (priority)
+
+Vishnu Priyan Mahendran's name must not appear on any profile. If an existing profile (Crunchbase, LinkedIn, G2, Capterra, or any other directory) already lists that name as founder, team member, or contact, remove it and note the change in your report.
+
 ## Consistency checklist before marking done
 
 - [ ] Same company name, address, and support email on all four properties
 - [ ] Same website URL and app store links
 - [ ] Logo and short description match across profiles
 - [ ] No duplicate personal profiles masquerading as the company (LinkedIn company page is the entity)
+- [ ] Vishnu Priyan Mahendran's name appears on no profile
 - [ ] Send Vishnu a list of live profile URLs when finished
 
 ## Deliverable
