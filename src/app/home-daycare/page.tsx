@@ -171,10 +171,6 @@ export default function HomeDaycarePage() {
           <h1 className="font-brand text-[32px] leading-[1.1] tracking-tight text-ink sm:text-5xl">
             A home daycare app, free for the first 20.
           </h1>
-          <p className="mt-4 text-base font-semibold leading-7 text-ink">
-            For the first 20 eligible home daycares. Some features may differ. We give at least 2
-            months&apos; notice before the offer changes.
-          </p>
           <p className="mt-4 text-sm leading-7 text-muted sm:text-base">
             Log attendance, meals, milk feeds, diapers and naps once. Families see the day when you
             choose, and your notes stay with you.
@@ -224,7 +220,7 @@ export default function HomeDaycarePage() {
           </section>
         </Reveal>
 
-        <Reveal delayMs={60}>
+        {/* <Reveal delayMs={60}>
           <section className="mt-14">
             <h2 className="font-brand text-2xl tracking-tight text-ink sm:text-3xl">
               What&apos;s included
@@ -241,7 +237,7 @@ export default function HomeDaycarePage() {
               ))}
             </ul>
           </section>
-        </Reveal>
+        </Reveal> */}
 
         <Reveal delayMs={80}>
           <section className="mt-14">
@@ -280,7 +276,6 @@ export default function HomeDaycarePage() {
               What happens after you join
             </h2>
             <ul className="mt-6 space-y-4 text-sm leading-7 text-muted sm:text-base">
-              <li>Your account stays free unless we give you 2 months&apos; notice.</li>
               <li>
                 We&apos;ll give you at least 2 months&apos; notice before we change or end this
                 offer, or move you to a paid plan. If your free account ends, you can export your
