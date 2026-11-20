@@ -43,7 +43,7 @@ export default function PricingPage() {
             >
               {PRICING.homeOfferLink}
             </Link>
-            {PRICING.homeOfferAfter}
+            {/* {PRICING.homeOfferAfter} */}
           </p>
         </Reveal>
 
