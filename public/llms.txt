@@ -10,34 +10,42 @@
 - Launched: September 2026
 - Country served: Canada
 - Contact: support@acornsnest.com
+- Hours: Monday to Friday, 9 a.m. to 5 p.m. Atlantic Time
 
 ## What Acorns Nest does
 
-Acorns Nest is a daycare management platform for licensed childcare centres. It covers:
+Acorns Nest is daycare management software for licensed childcare centres. It covers:
 
-- Attendance and check-in / check-out, with Bulk Log and Mid-day Exit and Return
-- Nap timers (one child or whole room, more than one nap per day)
-- Meal intake in 25% steps, infant milk in ounces
-- Weekly menu planner — breakfast, lunch, evening snack, saved reusable weeks
-- Parent communication: public classroom and centre feeds, private per-family notes
-- Attendance reports by centre, classroom and child, with CSV export
-- Staff timesheets with director approval
-- Outing Mode for field trips, with real-time parent notification
+- Attendance and check-in / check-out, with Bulk Log and Mid-day Exit and Return for appointments
+- Naps started and ended for one child or the whole room, more than one nap a day, or a time staff set
+- Meals, milk feeds in ounces or millilitres, and diaper checks
+- Weekly menus: breakfast, lunch, evening snack, up to four saved weeks placed on the calendar
+- A newsletter the director reviews, then shares with families
+- Parent updates: the care log opens as it is logged, or at a time the centre sets
+- Attendance reports by centre, room and child, with a spreadsheet export
+- Substitute timesheets with director approval
+- Outing Mode, with alerts to the families of children on the outing
+- Billing, your way. Keep your own records, or turn your invoices digital with our invoice tool, at no extra cost. Or let Acorns Nest collect tuition online for you through Stripe. If you take payments through Stripe, Stripe's processing fees apply, and we'll tell you what they are before you turn it on. Each centre chooses what fits.
 - AI Insights: director-facing briefings generated from the day's logs
+- We don't use your centre's records to train AI models.
 
 Directors use a web dashboard at acornsnest.com. Teachers, kitchen staff and parents use the iOS and Android apps.
 
 ## Who it is for
 
-Licensed childcare centres in Canada and the people who work in them: directors, lead and assistant early childhood educators (ECEs), substitutes, kitchen staff, and the parents and guardians of enrolled children.
+Licensed childcare centres in Canada: directors, teachers and early childhood educators, substitutes, kitchen staff, and the parents and guardians of enrolled children.
 
 ## How parents and staff get access
 
 There is no public sign-up. Centres invite each parent or staff member by email with a code. They accept the invite at acornsnest.com/accept-invite, install the app, and sign in.
 
+## Pricing
+
+One flat plan per centre, sized by how many children you care for, with unlimited staff and family logins. Prices are not listed on the site. We're piloting with a licensed daycare centre now, and opening pilots across Atlantic Canada. Pilot centres can ask for custom work.
+
 ## Privacy
 
-Children do not have accounts. Acorns Nest does not sell personal information and does not use it for advertising. Data is processed on the centre's instructions. See https://acornsnest.com/privacy for the full policy.
+Children do not have accounts. Acorns Nest does not sell personal information and does not use it for advertising. Data is processed on the centre's instructions. We don't use your centre's records to train AI models. See https://acornsnest.com/privacy for the full policy.
 
 ## Links
 

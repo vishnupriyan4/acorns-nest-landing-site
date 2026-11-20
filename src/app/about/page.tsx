@@ -9,11 +9,13 @@ const description =
   "Acorns Nest Inc. builds daycare management software in Halifax, Nova Scotia. Meet the team and how we work with licensed childcare centres in Atlantic Canada.";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: {
+    absolute: "About Acorns Nest Inc. | Daycare Software from Halifax, NS",
+  },
   description,
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About | Acorns Nest",
+    title: "About Acorns Nest Inc. | Daycare Software from Halifax, NS",
     description,
     url: "/about",
     type: "website",

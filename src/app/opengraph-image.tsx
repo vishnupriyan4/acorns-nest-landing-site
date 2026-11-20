@@ -73,8 +73,8 @@ export default function OpengraphImage() {
               maxWidth: 920,
             }}
           >
-            Attendance, naps, meals, parent messages, weekly menus and staff
-            timesheets in one daycare app. Built in Halifax, Nova Scotia.
+            Attendance, naps, meals and parent updates in one daycare app. Built in
+            Halifax, Nova Scotia.
           </div>
         </div>
 

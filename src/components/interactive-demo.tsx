@@ -84,7 +84,7 @@ export function InteractiveDemo() {
           line: "Checked in",
           pending:
             pending.length > 0
-              ? `${pending.join(", ")} · publishes with today's log`
+              ? `${pending.join(", ")} · shows with today's log`
               : null,
         };
       });
@@ -190,7 +190,7 @@ export function InteractiveDemo() {
               </p>
               <p className="mt-1 font-brand text-lg text-ink">What families see right now</p>
               <p className="mt-1 text-xs text-muted">
-                Check-in and outings land right away. Naps and meals wait for you to publish the day.
+                Check-in and outings land right away. Naps and meals show up as they're logged, or at your release time, whichever you choose.
               </p>
               {outing ? (
                 <div className="mt-4 rounded-lg bg-tertiary-muted px-3 py-2.5">

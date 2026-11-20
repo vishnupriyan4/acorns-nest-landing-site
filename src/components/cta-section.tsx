@@ -1,6 +1,7 @@
 "use client";
 
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { ArrowRight, CalendarDays, CheckCircle2, Loader2 } from "lucide-react";
+import Link from "next/link";
 import { useActionState, useEffect, type ReactNode } from "react";
 
 import { submitWalkthrough } from "@/actions/walkthrough";
@@ -39,6 +40,21 @@ export function CtaSection() {
         </Reveal>
 
         <Reveal delayMs={80}>
+          {state?.ok ? null : (
+            <>
+              <Link
+                href="/book"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-semibold text-primary-foreground shadow-lg transition hover:bg-primary-hover"
+              >
+                <CalendarDays className="size-4" />
+                Book a call with us
+                <ArrowRight className="size-4" />
+              </Link>
+              <p className="my-4 text-center text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                or send us a request
+              </p>
+            </>
+          )}
           <div className="rounded-2xl border border-border bg-background p-6 shadow-lg sm:p-8">
             {state?.ok ? (
               <div className="flex flex-col items-center py-10 text-center">

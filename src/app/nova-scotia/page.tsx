@@ -9,11 +9,13 @@ const description =
   "Daycare management software for licensed childcare centres in Nova Scotia. Built in Halifax: attendance, daily logs, parent updates, menus, and reports.";
 
 export const metadata: Metadata = {
-  title: "Nova Scotia",
+  title: {
+    absolute: "Daycare Software for Nova Scotia Centres | Acorns Nest",
+  },
   description,
   alternates: { canonical: "/nova-scotia" },
   openGraph: {
-    title: "Nova Scotia | Acorns Nest",
+    title: "Daycare Software for Nova Scotia Centres | Acorns Nest",
     description,
     url: "/nova-scotia",
     type: "website",

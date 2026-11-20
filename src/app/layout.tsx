@@ -27,7 +27,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://acornsnest.com";
 const defaultTitle =
   "Daycare Management Software, Built in Halifax | Acorns Nest";
 const defaultDescription =
-  "Acorns Nest is daycare management software for licensed childcare centres across Canada. Attendance, naps, meals, parent messages, weekly menus and staff timesheets in one app. Built in Halifax, Nova Scotia.";
+  "Daycare management software for licensed childcare centres in Canada. Teachers log the day once. Families see it when you choose. Built in Halifax.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

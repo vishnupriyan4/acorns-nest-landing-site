@@ -36,8 +36,8 @@ export default function AcceptInvitePage() {
             Accept your invite.
           </h1>
           <p className="mt-4 text-sm leading-7 text-muted sm:text-base">
-            Your centre already created the account. Open the link in the invitation, enter the
-            code, then install the app.
+            Your centre already created the account. Enter the code from your invitation, choose a
+            password, then install the app.
           </p>
         </Reveal>
         <Reveal delayMs={60}>

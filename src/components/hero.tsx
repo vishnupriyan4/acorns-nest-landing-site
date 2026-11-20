@@ -83,12 +83,14 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
             {HERO.eyebrow}
           </p>
           <h1 className="mt-4 font-brand text-[32px] leading-[1.1] tracking-tight text-ink sm:mt-6 sm:text-6xl">
-            {HERO.headlineBefore}
-            <span className="hero-gradient-text">{HERO.headlineAfter}</span>
+            <span className="block">
+              {HERO.headlineBefore}
+              <span className="hero-gradient-text">{HERO.headlineAfter}</span>
+            </span>
+            <span className="mx-auto mt-4 block max-w-2xl font-sans text-base font-semibold tracking-normal text-ink sm:mt-5 sm:text-lg">
+              {HERO.tagline}
+            </span>
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base font-semibold text-ink sm:mt-5 sm:text-lg">
-            {HERO.tagline}
-          </p>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted sm:text-base sm:leading-7">
             {HERO.subhead}
           </p>
@@ -140,7 +142,7 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
               <span className="pulse-ring absolute inset-0 rounded-full bg-tertiary" />
               <span className="relative size-2 rounded-full bg-tertiary" />
             </span>
-            Outing Mode live
+            Outing Mode
           </div>
           <a
             href="#ai"

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Reveal } from "@/components/ui/reveal";
 import { HOMEPAGE_FAQ } from "@/lib/content";
 
@@ -35,14 +37,14 @@ export function FaqSection() {
         </Reveal>
 
         <div className="mt-10 divide-y divide-border/70 rounded-xl border border-border/70 bg-background">
-          {HOMEPAGE_FAQ.map(({ question, answer }, i) => (
+          {HOMEPAGE_FAQ.map((item, i) => (
             <details
-              key={question}
+              key={item.question}
               className="group px-5 py-4 open:bg-cream/30 sm:px-6"
               open={i === 0}
             >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-base font-semibold text-ink">
-                <span>{question}</span>
+                <span>{item.question}</span>
                 <span
                   aria-hidden
                   className="shrink-0 text-primary transition-transform group-open:rotate-45"
@@ -51,12 +53,42 @@ export function FaqSection() {
                 </span>
               </summary>
               <p className="mt-3 text-sm leading-6 text-muted sm:text-base sm:leading-7">
-                {answer}
+                {"link" in item ? (
+                  <LinkedAnswer
+                    answer={item.answer}
+                    phrase={item.link.phrase}
+                    href={item.link.href}
+                  />
+                ) : (
+                  item.answer
+                )}
               </p>
             </details>
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function LinkedAnswer({
+  answer,
+  phrase,
+  href,
+}: {
+  answer: string;
+  phrase: string;
+  href: string;
+}) {
+  const at = answer.indexOf(phrase);
+  if (at === -1) return answer;
+  return (
+    <>
+      {answer.slice(0, at)}
+      <Link href={href} className="font-medium text-primary underline underline-offset-4">
+        {phrase}
+      </Link>
+      {answer.slice(at + phrase.length)}
+    </>
   );
 }

@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://acornsnest.com";
 
 // Public marketing pages only. /accept-invite stays off (functional page,
-// email in the query string). Add /home-daycare here when that page ships.
+// email in the query string).
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
@@ -27,10 +27,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${siteUrl}/book`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${siteUrl}/about`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/home-daycare`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${siteUrl}/support`,

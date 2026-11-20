@@ -6,14 +6,16 @@ import { Reveal } from "@/components/ui/reveal";
 import { FOOTER, PRICING } from "@/lib/content";
 
 const description =
-  "Pilot quotes for licensed childcare centres in Atlantic Canada. Custom work for pilot centres. Book a walkthrough for pricing.";
+  "One flat plan per centre, sized by how many children you care for, with unlimited staff and family logins. Book a walkthrough and we'll send pricing by email.";
 
 export const metadata: Metadata = {
-  title: "Pricing",
+  title: {
+    absolute: "Daycare management software pricing: one plan for your centre | Acorns Nest",
+  },
   description,
   alternates: { canonical: "/pricing" },
   openGraph: {
-    title: "Pricing | Acorns Nest",
+    title: "Daycare management software pricing: one plan for your centre | Acorns Nest",
     description,
     url: "/pricing",
     type: "website",
@@ -33,6 +35,16 @@ export default function PricingPage() {
           </h1>
           <p className="mt-4 text-sm leading-7 text-muted sm:text-base">{PRICING.intro}</p>
           <p className="mt-4 text-sm leading-7 text-muted sm:text-base">{PRICING.detail}</p>
+          <p className="mt-4 text-sm leading-7 text-foreground sm:text-base">
+            {PRICING.homeOfferBefore}
+            <Link
+              href={PRICING.homeOfferHref}
+              className="font-medium text-primary underline underline-offset-4"
+            >
+              {PRICING.homeOfferLink}
+            </Link>
+            {PRICING.homeOfferAfter}
+          </p>
         </Reveal>
 
         <Reveal delayMs={60}>

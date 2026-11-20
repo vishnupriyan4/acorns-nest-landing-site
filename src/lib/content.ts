@@ -8,7 +8,7 @@ export const NAV_LINKS = [
 
 export const APP_STORES = {
   kicker: "Now on the App Store and Google Play",
-  title: "Get Acorns Nest on the phone already in the room.",
+  title: "Get the Acorns Nest daycare app on the phone already in the room.",
   body: "Scan a code with your camera, or tap the store that matches your phone. Your centre creates the account. Accept the invite with the code in your email, install the app, then sign in.",
   heroLabel: "Teachers and families",
   listings: [
@@ -45,11 +45,14 @@ export const HERO = {
   headlineAfter: " written once.",
   tagline: "Daycare management software for licensed childcare centres in Canada.",
   subhead:
-    "Attendance, meals, milk, diapers, and nap timers go in from the room. Parents see check-ins and outings when you send them, and the rest of the day when you publish it. You stop writing that day a second time. The compliance-ready report is one tap.",
+    "Teachers log attendance, meals, milk, diapers and naps once, in the room. You decide when families see the day: as it's logged, or at a time you set. You stop writing that day a second time. Attendance reports export in one click when someone asks.",
   offers: [
-    { label: "Join our pilot now", href: "/pricing" },
-    // { label: "Custom work for pilot centres", href: "/pricing" },
-    { label: "Home daycares are free", href: "#walkthrough" },
+    { label: "Join our pilot", href: "#walkthrough" },
+    {
+      label: "Running a home daycare? The first 20 eligible join free.",
+      href: "/home-daycare",
+    },
+    { label: "Conditions apply.", href: "/home-daycare" },
   ],
   primaryCta: "Book a walkthrough",
   secondaryCta: "Take a look around",
@@ -57,16 +60,17 @@ export const HERO = {
 
 export const MARQUEE_ITEMS = [
   "Attendance & check-in",
-  "Nap timers",
+  "Nap logs",
   "Meal & milk logs",
   "Outing Mode",
   "Parent announcements",
   "Weekly menus",
-  "Staff timesheets",
+  "Substitute timesheets",
   "Classroom rosters",
   "Attendance reports",
   "Allergy-aware profiles",
   "AI Insights",
+  "Billing, your way",
 ] as const;
 
 export const STATS = [
@@ -101,8 +105,8 @@ export const STORY_SECTIONS = [
     id: "staff-home",
     topic: "Classroom home",
     kicker: "Life on the floor",
-    title: "Who's here, who's out, and who's off to the park.",
-    body: "Open your room and the present count is already there, matched against the roster. Heading out? Outing Mode takes the destination and a return time, then tells parents so pickup meets you where you actually are. Tap any child for allergies, emergency contacts, and how their day is going.",
+    title: "Attendance and check-in: who's here, who's out, and who's off to the park.",
+    body: "Open your room and the present count is already there, matched against the roster. Heading out? Outing Mode takes the destination and an expected return, then lets the families of children on the outing know where you went and when you're back. Tap any child for allergies, emergency contacts, and how their day is going.",
     bullets: [
       "A present count you can trust at a glance",
       "Outing Mode: destination, return time, parents in the loop",
@@ -120,11 +124,11 @@ export const STORY_SECTIONS = [
     topic: "Bulk Log",
     kicker: "One save, whole room",
     title: "Check the room in before the last coat is hung.",
-    body: "Bulk Log covers check-in, meals, milk, diapers, and naps. Hit Select All when everyone floods in, then save on the current time or pick your own. Appointments and early pickups get Mid-day Exit and Return. Nap timers run for one sleeper or the whole room, and yes, more than one nap a day.",
+    body: "Bulk Log covers check-in, meals, milk, diapers, and naps. Hit Select All when everyone floods in, then save on the current time or pick your own. Appointments get Mid-day Exit and Return. Start and end naps for one sleeper or the whole room, and yes, more than one nap a day.",
     bullets: [
       "Check In, Check Out, Mid-day Exit, and Return, notes included",
-      "Meals, infant milk, and diaper checks in the same save",
-      "Nap timers for one child or every mat in the room, or a time you set",
+      "Meals, milk feeds, and diaper checks from the same screen",
+      "Naps started and ended for one child or every mat in the room, or at a time you set",
     ],
     screenshot: {
       stem: "staff-log",
@@ -137,10 +141,10 @@ export const STORY_SECTIONS = [
     id: "parent-history",
     topic: "Families",
     kicker: "On your clock",
-    title: "You decide when the day reaches them.",
-    body: "Parents do not check children in or out. You choose when meals, milk, diapers, and naps open for families. Outings and messages can go the moment you send them. A planned absence comes from the family. Today's absence is marked in the room.",
+    title: "Parent updates: you decide when the day reaches them.",
+    body: "Parents do not check children in or out. You choose when meals, milk, diapers, and naps open for families. Outings and messages go the moment you send them. A teacher's post with photos waits for your OK first, unless you turn that off. A planned absence comes from the family. Today's absence is marked in the room.",
     bullets: [
-      "The care log opens at the time you choose",
+      "The care log opens as it's logged, or at the time you choose",
       "Outings and announcements go out as soon as you send them",
       "History on the same child, from the record staff already saved",
     ],
@@ -155,13 +159,13 @@ export const STORY_SECTIONS = [
     id: "director-desk",
     topic: "Director's desk",
     kicker: "The office work, once",
-    title: "The binder closes when the day does.",
-    body: "Upload the menu PDF you already make and those weeks repeat. You can still change a single day. The week's notes and photos become a newsletter you review, then share with families, including as an announcement. Attendance for the centre, a room, or one child exports in one click when the compliance file is due.",
+    title: "Menus, newsletters and attendance reports: the binder closes when the day does.",
+    body: "Upload the menu PDF you already make, keep up to four saved weeks, and place them on the calendar. You can still change a single day. The week's notes and photos become a newsletter you review, then share with families, including as an announcement. Attendance for the centre, a room, or one child exports in one click when someone asks for it.",
     bullets: [
       "Menu weeks repeat from the PDF you already use",
       "Newsletter drafted from the room, ready for you to review and share",
       "Compliance-ready attendance report in one click",
-      "Billing on only if you want it. Cards run through Stripe, a PCI Level 1 provider. Or invoice and record cash, e-transfer, or cheque",
+      "Billing, your way. Keep your own records, or turn your invoices digital with our invoice tool, at no extra cost. Or let Acorns Nest collect tuition online for you through Stripe. If you take payments through Stripe, Stripe's processing fees apply, and we'll tell you what they are before you turn it on. Each centre chooses what fits.",
     ],
     screenshot: {
       stem: "reports",
@@ -205,8 +209,8 @@ export const HERO_SHOTS = {
 
 export const ROLES_INTRO = {
   kicker: "Who it's for",
-  title: "Four jobs. One day, told once.",
-  body: "Directors, teachers, kitchen, and families each get the view that fits their hands. Underneath, it's the same attendance, the same meals, the same notes.",
+  title: "Four jobs, one day, told once: directors, teachers, kitchen staff and families.",
+  body: "Directors, teachers, kitchen staff, and families each get the view that fits their hands. Underneath, it's the same attendance, the same meals, the same notes.",
 } as const;
 
 export const ROLES = [
@@ -216,10 +220,10 @@ export const ROLES = [
     kicker: "Admin web",
     summary: "The whole centre, without pacing the hallway.",
     points: [
-      "Classroom Management: live tallies, Outing Mode, new learning spaces",
+      "Classrooms: present counts, active outings, and new rooms when you need them",
       "Invite staff and parents. Approve substitute hours before payroll.",
       "Menu from the PDF you already make. Newsletter you review and share.",
-      "Compliance-ready attendance export. Billing only if you want it. AI Insights",
+      "Attendance reports to export. Billing, your way. AI Insights",
     ],
   },
   {
@@ -229,16 +233,16 @@ export const ROLES = [
     summary: "Log the day from the room, not the office PC.",
     points: [
       "Classroom home with the present tally and Outing Mode",
-      "Bulk Log for attendance, nap timers, meals, milk, and diapers",
+      "Bulk Log for attendance, naps, meals, milk, and diapers",
       "A classroom note or a private word to one family",
-      "Notes and photos the family never sees, until you use them",
+      "Notes and photos families never see, unless you put them in a newsletter",
     ],
   },
   {
     id: "parent",
     title: "Parents",
     kicker: "Family mobile",
-    summary: "The day, when you release it. Not a sign-in job.",
+    summary: "The day, as it's logged or at your set time. Staff do the sign-ins.",
     points: [
       "Home: where their child is, outings, absences, and today's menu",
       "Room, centre, and private notes. They do not check anyone in",
@@ -252,9 +256,10 @@ export const ROLES = [
     kicker: "Menus & dietary care",
     summary: "What the children ate, against the menu the director posted.",
     points: [
-      "The week's meals are on parent home. Nothing taped to the door.",
+      "Today's menu is on parent home. Nothing taped to the door.",
       "Allergies and dietary needs on the child's card",
-      "Teachers log intake in the room. Infant milk in ounces.",
+      "Teachers log intake in the room, and milk feeds in ounces or millilitres.",
+      "Kitchen staff use the staff app in the rooms they're assigned to. The director plans the menu.",
     ],
   },
 ] as const;
@@ -262,7 +267,7 @@ export const ROLES = [
 export const CLASSROOM_DEMO = {
   kicker: "Try a classroom",
   title: "Go ahead, tap the room.",
-  body: "A working mock of the staff log, no account needed. Check someone in, start a nap, nudge lunch along, send the class to the park. Families see check-in and outings right away. Naps and meals go out when you publish the day.",
+  body: "A working mock of the staff log, no account needed. Check someone in, start a nap, log lunch, send the class to the park. Families see check-in and outings right away. Naps and meals show up as they're logged, or at your release time, whichever you choose.",
 } as const;
 
 export const HOW_IT_WORKS_INTRO = {
@@ -273,11 +278,11 @@ export const HOW_IT_WORKS_INTRO = {
 export const STEPS = [
   {
     title: "Coats off, room in",
-    body: "Select All and check the room in, start nap timers when the mats come out, and keep allergy notes a tap from your thumb.",
+    body: "Select All and check the room in, start naps when the mats come out, and keep allergy notes a tap from your thumb.",
   },
   {
     title: "You choose when families see it",
-    body: "Meals, milk, diapers, and naps open at the time you set. Outings and announcements can go the moment staff hit send. Directors see the rooms all along.",
+    body: "Meals, milk, diapers, and naps open as they're logged, or at the time you set. Outings and announcements go the moment staff hit send, and teacher photos wait for your OK if you want them to. Directors see the rooms all along.",
   },
   {
     title: "Doors closed, day recorded",
@@ -288,7 +293,7 @@ export const STEPS = [
 export const AI_SECTION = {
   title: "The week, already read for you",
   body: "Directors open AI Insights and get a plain-English briefing from the logs the rooms already keep: where the centre is steady, and where a quick conversation would help.",
-  note: "AI writes the first draft. You still decide the follow-up. Child records are not used to train models. You can run the centre without opening AI Insights.",
+  note: "AI writes the first draft. You still decide the follow-up. We don't use your centre's records to train AI models. You can run the centre without opening AI Insights.",
   href: "/#ai",
 } as const;
 
@@ -309,31 +314,36 @@ export const AI_SIGNALS = [
 
 export const PRICING = {
   kicker: "Pricing",
-  title: "Quotes for the pilot.",
+  title: "Daycare management software pricing: one plan for your centre.",
   intro:
-    "We're working with licensed childcare centres in Atlantic Canada. What you pay depends on your rooms and how many staff and parents use the app.",
+    "Acorns Nest Inc. offers one flat plan per centre, sized by how many children you care for. Every plan includes unlimited staff and family logins. We're working with licensed childcare centres in Atlantic Canada.",
   detail:
-    "Pilot centres can ask for custom work when something in your building does not match the default flow. Book a walkthrough, name your centre, and we'll send pricing by email. If you're outside Atlantic Canada, you can still write in. We'll tell you straight if we're not ready in your province yet.",
+    "Pilot centres can ask for custom work when something in your building doesn't match the default flow. Book a walkthrough, name your centre, and we'll send pricing by email. If you're outside Atlantic Canada, you can still write in. We'll tell you straight if we're not ready in your province yet.",
+  homeOfferBefore: "Running a daycare from your home? Acorns Nest is ",
+  homeOfferLink: "free for the first 20 eligible daycares run from home",
+  homeOfferHref: "/home-daycare",
+  homeOfferAfter:
+    ". Some features may differ, and we give at least 2 months' notice before the offer changes.",
   /** Cross-page links use #walkthrough (the form). Same-page hero links may use #demo. */
   walkthroughHref: "/#walkthrough",
   walkthroughCta: "Book a walkthrough",
-  existingCentresBefore: "Billing on an account you already have? Email ",
+  existingCentresBefore: "Question about your Acorns Nest Inc. account or invoice? Email ",
   existingCentresAfter: ". Weekdays, from Halifax.",
 } as const;
 
 export const ABOUT = {
   kicker: "About",
-  title: "Built in Halifax for the room, not the back office PC.",
+  title: "Built in Halifax for the room, not the back-office PC.",
   intro:
-    "Acorns Nest Inc. makes daycare management software for licensed childcare centres. Teachers log the day from the floor. Directors run the centre from a web dashboard. Parents read the same record when you publish it.",
+    "Acorns Nest Inc. makes daycare management software for licensed childcare centres. Teachers log the day from the floor. Directors run the centre from a web dashboard. Parents read the same record, as it's logged or at the time your centre sets.",
   story: [
     "We started Acorns Nest because the daily record in most centres still splits across paper, text threads, and an office computer nobody has time for at nap time.",
-    "The product went live in 2026 with iOS, Android, and a director dashboard. We are based in Halifax and working with pilot centres in Atlantic Canada first.",
+    "The product went live in 2026 with iOS, Android, and a director dashboard. We're based in Halifax, piloting with a licensed daycare centre now, and opening pilots across Atlantic Canada.",
   ],
   loadTitle: "Less rebuild, same logs",
   load: [
-    "The day still has to be written once. Staff log check-in, naps, and meals in the room. Directors should not rebuild that into a Monday recap.",
-    "AI Insights reads those logs and drafts a short briefing, plus the follow-ups worth a conversation. You decide what to do with it. Child records are not used to train models. You can run the centre without opening it.",
+    "The day still has to be written once. Staff log check-in, meals, milk, diapers and naps in the room. Directors should not rebuild that into a Monday recap.",
+    "AI Insights reads those logs and drafts a short briefing, plus the follow-ups worth a conversation. You decide what to do with it. We don't use your centre's records to train AI models. You can run the centre without opening it.",
   ],
   aiHref: "/#ai",
   aiCta: "See AI Insights",
@@ -341,12 +351,12 @@ export const ABOUT = {
   founders: [
     {
       name: "Vishnu Priyan Mahendran",
-      role: "Co-founder",
-      bio: "Product and engineering. Works with directors on pilot centres and day-to-day product direction.",
+      role: "Co-founder and Director",
+      bio: "Product and engineering. Works with directors at our pilot centre and on day-to-day product direction.",
     },
     {
       name: "Vignesh Moorthy",
-      role: "Co-founder",
+      role: "Co-founder and Director",
       bio: "Product and engineering. Helps centres get from first walkthrough to staff and parents on the app.",
     },
   ],
@@ -359,15 +369,15 @@ export const NOVA_SCOTIA = {
   kicker: "Nova Scotia",
   title: "Daycare software for licensed centres in Nova Scotia.",
   intro:
-    "Acorns Nest is built in Halifax for the same daily work NS centres already do: check-in, naps, meals, parent messages, menus, and attendance records staff can export when someone asks.",
+    "Acorns Nest Inc. builds Acorns Nest in Halifax for the same daily work NS centres already do: check-in, naps, meals, parent messages, menus, and attendance records you can export when someone asks.",
   sections: [
     {
       title: "For directors and owners",
-      body: "See every classroom on one screen. Run Menu Planner, Messages, staff timesheets, and attendance reports by centre, room, or child. AI Insights reads the logs your team already keeps and surfaces follow-ups worth a morning conversation.",
+      body: "See every classroom on one screen. Run Menu Planner, Messages, substitute timesheets, and attendance reports by centre, room, or child. AI Insights reads the logs your team already keeps and surfaces follow-ups worth a morning conversation.",
     },
     {
       title: "For staff and families",
-      body: "Teachers use Bulk Log in the room. Parents get check-ins, outings, and announcements as they happen. Naps, meals, and the full care log go out when you publish the day, on your schedule.",
+      body: "Teachers use Bulk Log in the room. Parents see their child's status, get outing alerts and announcements, and see the day's care record as it's logged or at the time you set. Teacher photos wait for your OK by default.",
     },
     {
       title: "Pilot in Atlantic Canada",
@@ -375,7 +385,11 @@ export const NOVA_SCOTIA = {
     },
     {
       title: "Provincial fees and records",
-      body: "Acorns Nest is not a subsidy filing system. If you want tuition in the app, turn billing on. Families can pay by card through Stripe, or you invoice them and record cash, e-transfer, or cheque. Either way, attendance and the daily care log are already in one place when the compliance file is due.",
+      body: "Acorns Nest is not a subsidy filing system. Billing, your way. Keep your own records, or turn your invoices digital with our invoice tool, at no extra cost. Or let Acorns Nest collect tuition online for you through Stripe. If you take payments through Stripe, Stripe's processing fees apply, and we'll tell you what they are before you turn it on. Each centre chooses what fits. Either way, attendance and the daily care log are already in one place when paperwork is due.",
+    },
+    {
+      title: "Built and supported from Halifax",
+      body: "Built and supported from Halifax, Monday to Friday, 9 a.m. to 5 p.m. Atlantic Time.",
     },
   ],
   walkthroughHref: "/#walkthrough",
@@ -390,11 +404,25 @@ export const CTA = {
   body: "We'll go through the director dashboard, Bulk Log, and the parent home using rooms, menus, and messages that look like yours.",
   bullets: [
     "Director tour: classrooms, reports, Menu Planner, Messages, AI Insights",
-    "Staff and parent mobile: home, Bulk Log, Communicate, History",
+    "Staff and parent mobile: Home, Bulk Log, Inbox, History",
     "Bring a typical day. We'll map the product onto it.",
   ],
-  submit: "Book a walkthrough",
+  submit: "Send my request",
   successTitle: "Talk soon.",
+} as const;
+
+export const BOOKING = {
+  /** Public short link to the Google appointment schedule (opens in a new tab). */
+  shareUrl: "https://calendar.app.google/iF9nF9D6DmjsN3aL7",
+  /** Embeddable version of the same schedule (the short link blocks iframes). */
+  embedUrl:
+    "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0B5U9InBzcYgeQyPaOWdW3hbZTTDlIS3FsA7UeTuCeE1hxCdWm3J0w-M6AdNO0XrK1IXIJiL8O?gv=true",
+  pageKicker: "Book a walkthrough",
+  pageTitle: "Pick a time that works for you.",
+  pageBody:
+    "Choose any open slot below. It goes straight onto our calendar and Google emails you a confirmation with the meeting details.",
+  fallbackPrompt: "Can't find a time that suits?",
+  fallbackCta: "Send us a request instead",
 } as const;
 
 export const FOOTER = {
@@ -410,7 +438,7 @@ export const FOOTER = {
     country: "Canada",
     countryCode: "CA",
     email: "support@acornsnest.com",
-    hours: "Monday to Friday, 9am–5pm Atlantic Time",
+    hours: "Monday to Friday, 9 a.m. to 5 p.m. Atlantic Time",
     founders: ["Vishnu Priyan Mahendran", "Vignesh Moorthy"],
   },
 } as const;
@@ -429,12 +457,12 @@ export const HOMEPAGE_FAQ = [
   {
     question: "What does Acorns Nest do?",
     answer:
-      "Teachers log check-in, naps, meals, milk, and diapers once, in the room. Directors run menus, newsletters, messages, hours, and attendance reports from that same record. You choose when families see the care log. Outings and announcements can go as soon as you send them.",
+      "Teachers log check-in, naps, meals, milk, and diapers once, in the room. Directors run menus, newsletters, messages, substitute hours, and attendance reports from that same record. You choose when families see the care log. Outings and announcements can go as soon as you send them.",
   },
   {
     question: "Who is Acorns Nest for?",
     answer:
-      "Licensed childcare centres in Canada: directors, lead and assistant educators, substitutes, kitchen staff, and the parents and guardians of enrolled children.",
+      "Licensed childcare centres in Canada: directors, teachers and early childhood educators, substitutes, kitchen staff, and the parents and guardians of enrolled children.",
   },
   {
     question: "How do parents and staff get access?",
@@ -444,7 +472,7 @@ export const HOMEPAGE_FAQ = [
   {
     question: "Does Acorns Nest send updates to parents in real time?",
     answer:
-      "You decide. Meals, milk, diapers, and naps open at the time the centre sets. Outings and announcements can go out as soon as staff send them.",
+      "You decide. Meals, milk, diapers, and naps can open as staff log them, or all at once at a time the centre sets (6 p.m. unless you change it). Outings and announcements go out as soon as staff send them.",
   },
   {
     question: "How does Acorns Nest handle children's privacy?",
@@ -459,12 +487,16 @@ export const HOMEPAGE_FAQ = [
   {
     question: "How much does Acorns Nest cost?",
     answer:
-      "There is no flat rate on the site. We quote after a walkthrough, with custom work available for pilot centres in Atlantic Canada. Start at acornsnest.com/#walkthrough or read acornsnest.com/pricing.",
+      "Acorns Nest has one flat plan per centre, sized by how many children you care for, with unlimited staff and family logins. We don't list prices on the site: book a walkthrough and we'll send yours by email. If you run a daycare from your home, Acorns Nest is free for the first 20 eligible daycares that join. Some features may differ, and we give at least 2 months' notice before the offer changes. Pilot centres in Atlantic Canada can ask for custom work. Start at acornsnest.com/#walkthrough or read acornsnest.com/pricing.",
+    link: {
+      phrase: "If you run a daycare from your home",
+      href: "/home-daycare",
+    },
   },
   {
     question: "Can families pay tuition in the app?",
     answer:
-      "Only if you turn billing on. Card payments are processed by Stripe, a PCI Level 1 provider. If you would rather not take cards in the app, invoice families and record cash, e-transfer, or cheque yourself.",
+      "Yes, if your centre wants it. Billing, your way. Keep your own records, or turn your invoices digital with our invoice tool, at no extra cost. Or let Acorns Nest collect tuition online for you through Stripe. If you take payments through Stripe, Stripe's processing fees apply, and we'll tell you what they are before you turn it on. Each centre chooses what fits.",
   },
 ] as const;
 
@@ -481,10 +513,10 @@ export const SUPPORT = {
   kicker: "Support",
   title: "Help with Acorns Nest.",
   intro:
-    "Acorns Nest is used by licensed childcare centres. Your centre creates and manages the accounts, so your director can answer most questions fastest. For everything else, write to us and a person will read it.",
+    "Acorns Nest Inc. builds Acorns Nest for licensed childcare centres. Your centre creates and manages the accounts, so your director can answer most questions fastest. For everything else, write to us and a person will read it.",
   contact: {
     email: "support@acornsnest.com",
-    hours: "Monday to Friday, 9am–5pm Atlantic Time",
+    hours: "Monday to Friday, 9 a.m. to 5 p.m. Atlantic Time",
     reply: "We reply within one business day.",
     address: [
       "Acorns Nest Inc.",
@@ -506,7 +538,7 @@ export const SUPPORT = {
       },
       {
         title: "Allow notifications",
-        body: "Notifications carry check-in, outing, and announcement alerts. If you skipped the prompt, turn Acorns Nest back on under Settings, Notifications on your device.",
+        body: "Notifications carry outing alerts, messages from your centre, classroom visit updates, and, if your centre shares the day as it's logged, a short note when a meal, milk feed, nap or diaper check is saved. If you skipped the prompt, turn Acorns Nest back on under Settings, Notifications on your device.",
       },
     ],
   },
@@ -529,7 +561,7 @@ export const SUPPORT = {
     {
       question: "Notifications aren't arriving.",
       answer:
-        "Confirm notifications are enabled for Acorns Nest in your device settings, then sign out and back in so the app can re-register. Note that naps, meals, and the full care log are released when staff publish the day, so they are not sent as they happen.",
+        "Confirm notifications are enabled for Acorns Nest in your device settings, then sign out and back in so the app can re-register. Your centre chooses whether you see each entry as it's logged or the full care record at a set time. With a set time, you won't get an alert for each entry.",
     },
     {
       question: "Who can see information about my child?",

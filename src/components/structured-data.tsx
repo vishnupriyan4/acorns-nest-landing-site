@@ -75,7 +75,7 @@ export function HomepageSchema() {
     applicationSubCategory: "Childcare management software",
     operatingSystem: "iOS 15.1+, Android, Web (director dashboard)",
     description:
-      "Daycare management app for licensed childcare centres in Canada: attendance and check-in, nap and meal logs, parent communication, weekly menus, staff timesheets, attendance reports and AI Insights.",
+      "Daycare management software for licensed childcare centres in Canada: attendance and check-in, meals, milk, diapers and naps, parent updates, weekly menus, newsletters, substitute timesheets and attendance reports.",
     url: `${siteUrl}/`,
     publisher: { "@id": `${siteUrl}/#org` },
     inLanguage: "en-CA",
