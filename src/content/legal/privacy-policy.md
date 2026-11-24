@@ -121,7 +121,7 @@ We engage a small number of providers to deliver the Service. Each is bound by c
 
 | Provider | Function |
 | --- | --- |
-| Railway | Application hosting (the backend that runs the Service) |
+| Amazon Web Services (AWS) | Application hosting (the backend that runs the Service) |
 | Supabase | Data storage, authentication, and transactional email |
 | Google Firebase | Push notification delivery to mobile devices |
 | Google Cloud Vertex AI | Artificial intelligence features (section 6.3) |
