@@ -6,6 +6,8 @@ import { FaqSection } from "@/components/faq-section";
 import { Hero } from "@/components/hero";
 import { HowItWorks } from "@/components/how-it-works";
 import { InteractiveDemo } from "@/components/interactive-demo";
+import { AnnouncementBar } from "@/components/news/announcement-bar";
+import { FoundingCommitteeTeaser } from "@/components/news/founding-committee-teaser";
 import { Roles } from "@/components/roles";
 import { StorySections } from "@/components/story-sections";
 import { HomepageSchema } from "@/components/structured-data";
@@ -15,21 +17,26 @@ export default function HomePage() {
   const shots = resolveAllShots();
 
   return (
-    <main id="top">
-      <HomepageSchema />
-      <Hero
-        classroomsSrc={shots.classrooms}
-        parentHomeSrc={shots["parent-home"]}
-      />
-      <CapabilityMarquee />
-      <StorySections shots={shots} />
-      <InteractiveDemo />
-      <Roles />
-      <HowItWorks />
-      <AiSection />
-      <CtaSection />
-      <FaqSection />
-      <AppStores />
-    </main>
+    <>
+      <AnnouncementBar />
+      <main id="top">
+        <HomepageSchema />
+        <Hero
+          classroomsSrc={shots.classrooms}
+          parentHomeSrc={shots["parent-home"]}
+          belowAnnouncement
+        />
+        <CapabilityMarquee />
+        <StorySections shots={shots} />
+        <InteractiveDemo />
+        <Roles />
+        <HowItWorks />
+        <AiSection />
+        <FoundingCommitteeTeaser />
+        <CtaSection />
+        <FaqSection />
+        <AppStores />
+      </main>
+    </>
   );
 }

@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+import { PP_ANNOUNCEMENT_LIVE, PP_PATH, PP_PUBLISHED_ISO } from "@/lib/news/point-pleasant";
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://acornsnest.com";
 
 // Public marketing pages only. /accept-invite stays off (functional page,
@@ -50,6 +52,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    // Go-live only: stays out until PP_ANNOUNCEMENT_LIVE is true.
+    ...(PP_ANNOUNCEMENT_LIVE
+      ? [
+          {
+            url: `${siteUrl}${PP_PATH}`,
+            lastModified: new Date(PP_PUBLISHED_ISO),
+            changeFrequency: "monthly" as const,
+            priority: 0.7,
+          },
+        ]
+      : []),
     {
       url: `${siteUrl}/privacy`,
       lastModified: now,

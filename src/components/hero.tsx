@@ -39,9 +39,11 @@ function Stat({
 type HeroProps = {
   classroomsSrc: string | null;
   parentHomeSrc: string | null;
+  /** True when the announcement bar already clears the fixed header. Keeps the same visual gap. */
+  belowAnnouncement?: boolean;
 };
 
-export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
+export function Hero({ classroomsSrc, parentHomeSrc, belowAnnouncement = false }: HeroProps) {
   const { ref, isInView } = useInView<HTMLElement>({ threshold: 0.2 });
   const [orb, setOrb] = useState({ x: 0, y: 0 });
 
@@ -56,7 +58,10 @@ export function Hero({ classroomsSrc, parentHomeSrc }: HeroProps) {
   }, []);
 
   return (
-    <section ref={ref} className="relative overflow-hidden pt-20 sm:pt-32">
+    <section
+      ref={ref}
+      className={`relative overflow-hidden ${belowAnnouncement ? "pt-6 sm:pt-14" : "pt-20 sm:pt-32"}`}
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute -left-24 top-16"
