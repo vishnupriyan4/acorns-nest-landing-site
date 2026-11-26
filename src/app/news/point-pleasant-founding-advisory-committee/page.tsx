@@ -1,6 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 import type { Metadata } from "next";
-import { getImageProps } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -77,40 +77,64 @@ function Section({
   );
 }
 
-function Banner() {
-  const common = {
-    alt: PP_ARTICLE.bannerAlt,
-    sizes: "(min-width: 768px) 704px, calc(100vw - 40px)",
-  };
-  const {
-    props: { srcSet: desktopSrcSet },
-  } = getImageProps({
-    ...common,
-    src: "/Announcement_desktop_banner.png",
-    width: 1376,
-    height: 768,
-  });
-  const {
-    props: { srcSet: mobileSrcSet, ...rest },
-  } = getImageProps({
-    ...common,
-    src: "/Announcement_mobile_banner.png",
-    width: 1024,
-    height: 1024,
-    preload: true,
-  });
-
+function PartnerLogo({
+  src,
+  alt,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+}) {
   return (
-    <div className="mt-8 overflow-hidden rounded-2xl shadow-md ring-1 ring-border">
-      <picture>
-        <source media="(min-width: 640px)" srcSet={desktopSrcSet} />
-        <img
-          {...rest}
-          srcSet={mobileSrcSet}
-          alt={PP_ARTICLE.bannerAlt}
-          className="block aspect-square h-auto w-full sm:aspect-[1376/768]"
-        />
-      </picture>
+    <div className="mx-auto aspect-square w-full max-w-44 overflow-hidden rounded-full bg-background shadow-lg ring-4 ring-background">
+      <Image
+        src={src}
+        alt={alt}
+        width={352}
+        height={352}
+        sizes="(min-width: 640px) 176px, 30vw"
+        preload
+        className={`size-full object-cover ${className}`}
+      />
+    </div>
+  );
+}
+
+/** Coded banner: both partner logos on the site's cream card with the hero's soft glows. */
+function LogoCard() {
+  return (
+    <div className="relative mt-8 overflow-hidden rounded-2xl bg-cream px-5 py-10 shadow-md ring-1 ring-border sm:px-10 sm:py-12">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-20 -top-20 size-72 rounded-full bg-primary-muted blur-2xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-24 -right-20 size-80 rounded-full bg-cream-deep blur-2xl"
+      />
+      <div className="grain" />
+
+      <div className="relative flex flex-col items-center">
+        <p className="inline-flex whitespace-nowrap rounded-full border border-primary/15 bg-background/70 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary shadow-sm backdrop-blur sm:text-xs sm:tracking-[0.18em]">
+          Founding Advisory Committee
+        </p>
+
+        <div className="mt-8 grid w-full max-w-lg grid-cols-[1fr_auto_1fr] items-center gap-x-3 sm:gap-x-6">
+          <PartnerLogo src="/AcornsNest_circular_logo.png" alt="Acorns Nest logo" />
+          <span
+            aria-hidden="true"
+            className="flex size-10 items-center justify-center rounded-full bg-primary-muted text-primary shadow-sm ring-1 ring-primary/15 sm:size-12"
+          >
+            <X className="size-5 sm:size-6" strokeWidth={2.5} />
+          </span>
+          <PartnerLogo
+            src="/PPCCC_circular_logo.png"
+            alt={`${PP_ORG} logo`}
+            className="scale-[1.08]"
+          />
+        </div>
+      </div>
     </div>
   );
 }
@@ -229,7 +253,7 @@ export default function PointPleasantAnnouncementPage() {
           </p>
         </header>
 
-        <Banner />
+        <LogoCard />
 
         <div className="mt-8 rounded-2xl border border-border bg-background p-6 shadow-sm sm:p-10">
           <p className="text-sm leading-7 text-foreground sm:text-base">

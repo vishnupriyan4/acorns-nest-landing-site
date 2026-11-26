@@ -33,8 +33,6 @@ export const PP_META = {
 export const PP_ARTICLE = {
   h1: "Point Pleasant Child Care Centre joins the Acorns Nest Founding Advisory Committee",
   subhead: "A Halifax centre, helping shape the app built for directors like them.",
-  bannerAlt:
-    "Acorns Nest and Point Pleasant Child Care Centre logos side by side under the heading Founding Advisory Committee",
   /** Rendered as: `${leadBefore}<time>${PP_PUBLISHED_LABEL}</time>${leadAfter}` */
   leadBefore: "Halifax, Nova Scotia, ",
   leadAfter:
