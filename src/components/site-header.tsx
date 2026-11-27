@@ -50,19 +50,19 @@ export function SiteHeader() {
           <BrandMark size="sm" />
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted transition-colors hover:text-primary"
+              className="whitespace-nowrap text-sm font-medium text-muted transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Link
             href="/#walkthrough"
             scroll={false}
@@ -74,7 +74,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="relative z-10 inline-flex size-10 items-center justify-center rounded-lg text-foreground md:hidden"
+          className="relative z-10 inline-flex size-10 items-center justify-center rounded-lg text-foreground lg:hidden"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
@@ -83,7 +83,7 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <div
           className={`fixed inset-0 top-14 bg-ink/30 transition-opacity sm:top-[72px] ${
             open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
